@@ -4,7 +4,7 @@ Edit front matter markdown files with Jinja2 templates.
 
 ## Description:
 
-This is a `python3` (v3.6.8+) class/module that can be used for batch processing and<br>
+This is a `python3` (v3.5.3+) class/module that can be used for batch processing and<br>
 editing front matter in markdown files. Front matter is managed via<br>
 [Jinja2](http://jinja.pocoo.org/) template processor.
 
@@ -153,6 +153,7 @@ if __name__ == '__main__':
     main()
 
 ```
+
 
 * Final Output:
 

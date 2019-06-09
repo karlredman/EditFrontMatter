@@ -16,7 +16,7 @@
 
     .. Note: literal include is relative to the documentation directory
 
-    .. literalinclude:: ../../../../examples/requirements.txt
+    .. literalinclude:: ../../../../requirements.txt
         :language: text
 
 :License: `MIT <https://karlredman.github.io/EditFrontMatter/LICENSE>`_
@@ -108,7 +108,7 @@ class Derived_EditFrontMatter (EditFrontMatter):
             # we'll fail gracefully -probably a bad source file (i.e. missing
             # and yaml_end delimiter
             with print_lock:
-                print(f"Error (exception): @Derived_EditFrontMatter.__init__(): {self.file_path}", file=sys.stderr)
+                print("Error (exception): @Derived_EditFrontMatter.__init__(): {file_path}".format(file_path=self.file_path), file=sys.stderr)
             self.EXCEPTION = True
 
     def run(self, write_file=False, extraVars_dict={}, keys_toDelete=[], *args, **kwargs) -> str:
@@ -163,13 +163,15 @@ class Derived_EditFrontMatter (EditFrontMatter):
         if not self.has_source_data():
             # file does not contain any data -punt
             with print_lock:
-                print(f"Error: No source data: {self.file_path}", file=sys.stderr)
+                print("Error: No source data: {file_path}".
+                      format(file_path=self.file_path), file=sys.stderr)
             err = True
 
         if not self.has_source_yaml():
             # file does not contain yaml -punt
             with print_lock:
-                print(f"Error: No source yaml: {self.file_path}", file=sys.stderr)
+                print("Error: No source yaml: {file_path}".
+                      format(file_path=self.file_path), file=sys.stderr)
             err = True
 
         try:
@@ -184,7 +186,8 @@ class Derived_EditFrontMatter (EditFrontMatter):
         except IOError:
             # report that the file write failed and move on
             with print_lock:
-                print(f"Error (IOError exception): @EditFrontMatter.run(): {self.file_path}", file=sys.stderr)
+                print("Error (IOError exception): @EditFrontMatter.run(): {file_path}"
+                      .format(file_path=self.filepath), file=sys.stderr)
             return ""
 
 
@@ -233,7 +236,8 @@ def main():
     for top in include_dirs:
         if os.path.normpath(top) in (os.path.normpath(p) for p in exclude_dirs):
             # error
-            print(f"Error: Included dir, {top}, found in exclude_dirs list", file=sys.stderr)
+            print("Error: Included dir, {top}, found in exclude_dirs list".
+                  format(top), file=sys.stderr)
             exit(1)
 
     # build file list by walking the included directories
@@ -274,26 +278,27 @@ def main():
                     data = future.result()
                 except Exception as exc:
                     # generic exception handler.... eeep!
-                    print(f"{file_path} generated an exception: {exc}", file=sys.stderr)
+                    print("{file_path} generated an exception: {exc}".
+                          format(file_path=file_path, exc=exc), file=sys.stderr)
                 else:
                     # print the file path and file data returned from run()
                     # print(f"processed: {file_path}\n{data}")
 
                     # just print the file paths
-                    print(f"processed: {file_path}")
+                    print("processed: {file_path}".format(file_path=file_path))
 
                     # detect if there was an error -with extra of cheeze
                     if data != "":
                         processed_count += 1
     except Signal_Caught as e:
         # gracefully shutdown (caught c-c, etc)
-        print(f"Exception: ....shutting down: {str(e)}", file=sys.stderr)
+        print("Exception: ....shutting down: {e}".format(e=str(e)), file=sys.stderr)
         global STOP_ALL
         STOP_ALL = True
 
     # report
-    print(f"number of files: {len(files_to_process_list)}")
-    print(f"number processed: {processed_count}")
+    print("number of files: {fl}".format(fl=len(files_to_process_list)))
+    print("number processed: {processed_count}".format(processed_count=processed_count))
 
     if STOP_ALL:
         print("There were errors", file=sys.stderr)
