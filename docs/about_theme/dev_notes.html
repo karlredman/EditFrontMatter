@@ -174,11 +174,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id12">References:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pip-install-locally">pip install locally</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#theme-style-guide">Theme Style guide</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#references-for-later-documentation">References (for later documentation)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#docstrings-python">Docstrings (python)</a></li>
@@ -196,6 +191,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#boilerplate-features">Boilerplate features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#configurables">configurables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#replacement-text-restrictions-in-the-docstring-for-config-py">replacement text restrictions in the docstring for config.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-publishing-checklist">Pre publishing checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pip-install-locally">pip install locally</a></li>
 </ul>
 </li>
 </ul>
@@ -506,23 +507,6 @@ sphinx-autobuild docsource/source docsource/build/html
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="packaging-pypi-notes">
-<h2>Packaging / PyPi Notes:<a class="headerlink" href="#packaging-pypi-notes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id12">
-<h3>References:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://realpython.com/pypi-publish-python-package/">How to Publish an Open-Source Python Package to PyPI – Real Python</a></p></li>
-<li><p><a class="reference external" href="https://python-packaging.readthedocs.io/en/latest/minimal.html">Minimal Structure — Python Packaging Tutorial</a></p></li>
-</ul>
-</div>
-<div class="section" id="pip-install-locally">
-<h3>pip install locally<a class="headerlink" href="#pip-install-locally" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd &lt;project dir&gt;</span>
-pip install -e .
-</pre></div>
 </div>
 </div>
 </div>
@@ -904,6 +888,63 @@ editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.rst  editfrontma
 </ul>
 </li>
 </ul>
+</div>
+</div>
+<div class="section" id="pre-publishing-checklist">
+<h2>Pre publishing checklist<a class="headerlink" href="#pre-publishing-checklist" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>check the gitignore files and adjust accordingly</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="c1">--ignored</span>
+</pre></div>
+</div>
+<ul>
+<li><p>if it’s a sandbox git repo that is already published, replace history:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gist.github.com/stephenhardy/5470814">Steps to clear out the history of a git/github repository · GitHub</a></p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="err">#</span><span class="w"> </span><span class="k">double</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="p">.</span><span class="n">gitignore</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="c1">--ignored</span>
+
+<span class="err">#</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="n">documentation</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">order</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="n">everything</span><span class="w"> </span><span class="n">builds</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">runs</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="n">tests</span><span class="w"> </span><span class="n">pass</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">history</span><span class="w"> </span><span class="k">from</span><span class="w"></span>
+<span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">rf</span><span class="w"> </span><span class="p">.</span><span class="n">git</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">recreate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">repos</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">current</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="k">only</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">init</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">-</span><span class="n">A</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="ss">&quot;Initial commit&quot;</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">github</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="n">repos</span><span class="w"> </span><span class="n">ensuring</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">overwrite</span><span class="w"> </span><span class="n">history</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">YOUR</span><span class="w"> </span><span class="n">ACCOUNT</span><span class="o">&gt;/&lt;</span><span class="n">YOUR</span><span class="w"> </span><span class="n">REPOS</span><span class="o">&gt;</span><span class="p">.</span><span class="n">git</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="c1">--force origin master</span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="n">again</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">reverify</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">retest</span><span class="w"> </span><span class="n">everything</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="packaging-pypi-notes">
+<h2>Packaging / PyPi Notes:<a class="headerlink" href="#packaging-pypi-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>References:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/pypi-publish-python-package/">How to Publish an Open-Source Python Package to PyPI – Real Python</a></p></li>
+<li><p><a class="reference external" href="https://python-packaging.readthedocs.io/en/latest/minimal.html">Minimal Structure — Python Packaging Tutorial</a></p></li>
+</ul>
+</div>
+<div class="section" id="pip-install-locally">
+<h3>pip install locally<a class="headerlink" href="#pip-install-locally" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd &lt;project dir&gt;</span>
+pip install -e .
+</pre></div>
+</div>
 </div>
 </div>
 </div>
