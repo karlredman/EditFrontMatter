@@ -1,0 +1,58 @@
+.wy-nav-content-wrap {
+	background: #fcfcfc;
+}
+.wy-nav-content {
+	/* overall page width */
+    /* max-width: 2560px !important; */
+    /* max-width: 1920px !important; */
+    /* max-width: 1600px !important; */
+    max-width: 1366px !important;
+}
+.wy-nav-top {
+	/* mobile nav top */
+	background: #2C3E50;
+}
+.wy-alert-title, .rst-content .admonition-title {
+	/* admonition title bar */
+    background: #566573;
+}
+.rst-content pre.literal-block, .rst-content div[class^='highlight'] {
+	/* preformatted blocks */
+    /* max-width: 1080px !important; */
+    max-width: 1024px !important;
+}
+/* p { */
+/* 	/1* preformatted blocks *1/ */
+/*     /1* max-width: 1080px !important; *1/ */
+/*     max-width: 1024px !important; */
+/* } */
+pre {
+	/* preformatted blocks */
+    /* max-width: 1080px !important; */
+    max-width: 1024px !important;
+}
+.rst-content .admonition {
+	/* admonition box background bar */
+    background: #D7DBDD;
+    max-width: 720px !important;
+}
+.rst-content dl:not(.docutils) dl.method dt {
+    /* method header */
+    background: #e7f2fa;
+	border-left: solid 3px #6ab0de
+}
+.rst-content dl:not(.docutils) dl.method dl dt {
+    /* method child attribute headings */
+    background: #f0f0f0;
+	border-left: solid 3px #ccc
+}
+a.btn.btn-neutral.float-right {
+	/* stop float right for next btn */
+	float: none;
+}
+.wy-breadcrumbs li.wy-breadcrumbs-aside {
+	/* move the edit on github link over to accomidate for ribbon */
+	/* float: none; */
+	/* padding-left: 150px; */
+	padding-right: 50px;
+}

@@ -1,0 +1,582 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Batch Edit Yaml Front Matter &mdash; EditFrontMatter 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://karlredman.github.io/EditFrontMatterindex.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/theme_customization.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Full Features List" href="features.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="#" class="icon icon-home"> EditFrontMatter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+	<center><font color="gray">Current Release: 0.0.1</font></center>
+	<hr style="height:1px; border:none; color:#000; background-color:#000;">
+
+	<a href="https://github.com/karlredman/EditFrontMatter"><font color="#76D7C4">Github Project Page</font></a>
+	<a href="https://pypi.org/project/EditFrontMatter"><font color="#76D7C4">PyPi Project Page</font></a>
+	
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Full Features List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">EditFrontMatter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editfrontmatter/editfrontmatter.html">Edit Front Matter Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.html">Class: EditFrontMatter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.html">add_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.html">del_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html">dumpFileData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html">dumpFrontMatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data.html">has_source_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml.html">has_source_yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html">readFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.run.html">run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.html">set_yaml_delim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html">writeFile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.html">Class: EditFrontMatter_Exception</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.__init__.html">__init__</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="programs.html">Example Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/example1/index.html">EditFrontMatter: Example 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/example1/readme.html">EditFrontMatter: Example 1 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples/example1/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="examples/example1/example1.html"><em>Basic Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example2/index.html">EditFrontMatter: Example 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/example2/readme.html">EditFrontMatter: Example 2 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples/example2/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="examples/example2/example2.html"><em>Advanced, Multi-Pass, Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example3/index.html">EditFrontMatter: Example 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/example3/readme.html">EditFrontMatter: Example 3 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="examples/example3/readme.html#program-flow">Program flow:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/example3/readme.html#constraints">Constraints:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/example3/readme.html#running-the-program">Running the program:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="examples/example3/readme.html#example-input-output">Example Input / Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="examples/example3/example3.html"><em>Threaded, Directory Walking Example</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#are-these-answers-actually-frequently-asked">Are these answers actually frequently asked?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-is-this-project-so-heavily-distractingly-etc-documented">Why is this project so heavily / distractingly / etc. documented?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-did-you-write-this-module">Why did you write this module?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#where-is-the-test-suite">Where is the test suite!?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contrib.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contrib.html#editfrontmatter-contributing-guidelines">EditFrontMatter Contributing Guidelines:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html"><span class="raw-html"><font color="gray">Changelog</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_license.html"><span class="raw-html"><font color="gray">Code License</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_theme/about_theme.html"><span class="raw-html"><font color="#7D6608">About Theme</font></span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about_theme/dev_notes.html">RTD Theme Developer Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/dev_notes.html#layout">Layout:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/dev_notes.html#sphinx-notes">Sphinx Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#references">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#building">Building:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#live-update-dev-server">Live update dev server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#fixes">Fixes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#sphinx-rtd-theme-notes">Sphinx RTD Theme Notes:</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="about_theme/dev_notes.html#id11">References:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="about_theme/dev_notes.html#github-fork-on-github-banner">GitHub ‘Fork on GitHub’ Banner:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="about_theme/dev_notes.html#site-index-on-sidebar">Site index on sidebar</a></li>
+<li class="toctree-l5"><a class="reference internal" href="about_theme/dev_notes.html#remove-the-word-module-from-the-end-of-sidebar-code-elements">Remove the word “module” from the end of sidebar code elements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/dev_notes.html#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#id12">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#pip-install-locally">pip install locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/dev_notes.html#theme-style-guide">Theme Style guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#references-for-later-documentation">References (for later documentation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#docstrings-python">Docstrings (python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#things-to-document">Things to Document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#rules">Rules:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/dev_notes.html#generating-class-methods-for-use-the-sidebar-toc-and-respective-individual-files">Generating class methods for use the sidebar toc and respective individual files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#before-adding-autosummary-functionality">Before adding autosummary functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#generate-method-files">Generate method files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#maintenance">maintenance:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/dev_notes.html#include-mardown-document-in-rest">Include mardown document in reST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/dev_notes.html#boilerplate-features">Boilerplate features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#configurables">configurables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/dev_notes.html#replacement-text-restrictions-in-the-docstring-for-config-py">replacement text restrictions in the docstring for config.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="about_theme/conf.html">Sphinx config.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about_theme/theme_readme.html">Sphinx RTD boilerplate Readme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="about_theme/theme_readme.html#running-building-and-testing">Running, Building and Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/theme_readme.html#running-example-apps">Running example apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/theme_readme.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="about_theme/theme_readme.html#testing-documentation-examples-via-doctest">Testing documentation examples via <code class="docutils literal notranslate"><span class="pre">doctest</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+	<a href="https://karlredman.github.io"><font color="#7D6608">Author's Homepage</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/genindex.html"><font color="#196F3D">Overview: Source Code Function Index</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/_modules/index.html"><font color="#196F3D">Overview: Source Code Index</font></a>
+
+
+	<!-- <hr style="height:1px; border:none; border-top: dashed 1px; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top:dashed; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top: dashed 1px; color:#000; background-color#000" /> -->
+	<!-- <hr style="border-top: dashed 1px;" /> -->
+	<!-- <a href="https://karlredman.github.io"><font color="#F7DC6F">Author's Homepage</font></a> -->
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">EditFrontMatter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Batch Edit Yaml Front Matter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/karlredman/EditFrontMatter/blob/master/README.md" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="features.html" class="btn btn-neutral float-right" title="Full Features List" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+            
+  <p><span class="raw-html"><font color="#8E44AD">(See sidebar for Table of Contents)</font></span></p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="batch-edit-yaml-front-matter">
+<h1>Batch Edit Yaml Front Matter<a class="headerlink" href="#batch-edit-yaml-front-matter" title="Permalink to this headline">¶</a></h1>
+<p>Edit front matter markdown files with Jinja2 templates.</p>
+<div class="section" id="description">
+<h2>Description:<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>This is a <code class="docutils literal notranslate"><span class="pre">python3</span></code> (v3.6.8+) class/module that can be used for batch processing and<span class="raw-html-m2r"><br></span>
+editing front matter in markdown files. Front matter is managed via<span class="raw-html-m2r"><br></span>
+<a class="reference external" href="http://jinja.pocoo.org/">Jinja2</a> template processor.</p>
+</div>
+<div class="section" id="features">
+<h2>Features:<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Add / Update / Delete any front matter fields</p></li>
+<li><p>Preserves front matter element order via <a class="reference external" href="https://github.com/wimglenn/oyaml">oyaml</a></p></li>
+<li><p>Uses <a class="reference external" href="http://jinja.pocoo.org/">Jinja2</a> Templates for configuration and processing:</p>
+<ul>
+<li><p>Use Jinja2 filters for complex processing</p></li>
+<li><p>Incrementally process files with multiple templates</p></li>
+</ul>
+</li>
+<li><p>Uses Exceptions around sensitive areas of code</p></li>
+<li><p>Examples for implementation:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://karlredman.github.io/EditFrontMatter/examples/example1/readme.html">Basic usage</a></p></li>
+<li><p><a class="reference external" href="https://karlredman.github.io/EditFrontMatter/examples/example2/readme.html">Advanced mulit-pass processor</a></p></li>
+<li><p><a class="reference external" href="https://karlredman.github.io/EditFrontMatter/examples/example3/readme.html">Recursive directory walker that uses multi-threading to edit files</a></p></li>
+</ol>
+</li>
+<li><p>Documented with <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> and <a class="reference external" href="https://karlredman.github.io/EditFrontMatter">hosted on Github</a></p></li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation:<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://karlredman.github.io/EditFrontMatter/">Project Documentation with examples Page</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="installation">
+<h1>Installation:<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install editfrontmatter
+</pre></div>
+</div>
+<div class="section" id="tl-dr-example-usage">
+<h2>TL;DR Example Usage:<a class="headerlink" href="#tl-dr-example-usage" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Original markdown file with yaml front matter (<a class="reference external" href="https://github.com/karlredman/EditFrontMatter/blob/master/examples/data/example1.md">example1.md</a>)</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
+title: &quot;EditFrontMatter Class Example 1&quot;
+description: &quot;Edit 2 fields in this front matter&quot;
+catagories: [programming, python, markdown]
+
+deleteme: this will be deleted
+
+tags: [front matter, administration, testing]
+
+<span class="gh">#</span> comments and spaces will be eliminated (see docs)
+
+author: &quot;Karl N. Redman&quot;
+creatordisplayname: &quot;Karl N. Redman&quot;
+creatoremail: &quot;karl.redman@example.com&quot;
+date: 2019-05-23T17:43:45-05:00
+lastmodifierdisplayname: &quot;Karl N. Redman&quot;
+lastmodifieremail: &quot;karl.redman@gmail.com&quot;
+lastmod: 2019-05-23T17:43:45-05:00
+toc: false
+type: &quot;page&quot;
+hasMath: false
+draft: false
+weight: 5
+---
+
+<span class="gh">#</span> EditFontMatter Class Example 1
+
+Edit several fields of front matter.
+
+<span class="gu">##</span> Fields affected in this example:
+
+<span class="k">*</span> toc
+  <span class="k">*</span> note: uses local template variable
+  <span class="k">*</span> pre: false
+  <span class="k">*</span> post: true
+<span class="k">*</span> draft:
+  <span class="k">*</span> note: uses jinja2 filter (callback)
+  <span class="k">*</span> pre: false
+  <span class="k">*</span> post: true
+<span class="k">*</span> hasMath
+  <span class="k">*</span> note: uses program variable
+  <span class="k">*</span> pre: true
+  <span class="k">*</span> post: false
+<span class="k">*</span> stuff:
+  <span class="k">*</span> note: uses program variable to create field
+  <span class="k">*</span> pre: did not exist
+  <span class="k">*</span> post: (list) [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;]
+<span class="k">*</span> deleteme:
+  <span class="k">*</span> note: removed from final result
+  <span class="k">*</span> pre: this will be deleted
+  <span class="k">*</span> post: N/A
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Jinja2 template that will update the front matter data of the source markdown file (<a class="reference external" href="https://github.com/karlredman/EditFrontMatter/blob/master/examples/data/template1.j2">template1.j2</a>)</p></li>
+</ul>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">toc</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">toc: </span><span class="cp">{{</span> <span class="nv">toc</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">draft: </span><span class="cp">{{</span> <span class="kp">false</span> <span class="o">|</span> <span class="nf">canPublish</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">hasMath: </span><span class="cp">{{</span> <span class="nv">hasMath</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">stuff: </span><span class="cp">{{</span> <span class="nv">addedVariable</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Python program to edit the markdown file with the Jinja2 template (<a class="reference external" href="https://github.com/karlredman/EditFrontMatter/blob/master/examples/example1/example1.py">example1.py</a>)</p></li>
+</ul>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+
+<span class="kn">from</span> <span class="nn">editfrontmatter</span> <span class="kn">import</span> <span class="n">EditFrontMatter</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="k">def</span> <span class="nf">canPublish_func</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="c1"># do some processing....</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="c1"># generic path - overridden by env var `TEST_DATA_DIR`</span>
+    <span class="n">DATA_PATH</span> <span class="o">=</span> <span class="s2">&quot;../data/&quot;</span>
+
+    <span class="k">if</span> <span class="s2">&quot;TEST_DATA_DIR&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+        <span class="n">DATA_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;TEST_DATA_DIR&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+
+    <span class="c1"># set path to input file</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">DATA_PATH</span> <span class="o">+</span> <span class="s2">&quot;example1.md&quot;</span><span class="p">)</span>
+
+    <span class="c1"># initialize `template_str` with template file content</span>
+    <span class="n">template_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">DATA_PATH</span> <span class="o">+</span> <span class="s2">&quot;template1.j2&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">template_str</span><span class="p">)</span>
+
+    <span class="c1"># instantiate the processor</span>
+    <span class="n">proc</span> <span class="o">=</span> <span class="n">EditFrontMatter</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> <span class="n">template_str</span><span class="o">=</span><span class="n">template_str</span><span class="p">)</span>
+
+    <span class="c1"># set fields to delete from yaml</span>
+    <span class="n">proc</span><span class="o">.</span><span class="n">keys_toDelete</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;deleteme&#39;</span><span class="p">]</span>
+
+    <span class="c1"># add a filter and callback function</span>
+    <span class="n">proc</span><span class="o">.</span><span class="n">add_JinjaFilter</span><span class="p">(</span><span class="s1">&#39;canPublish&#39;</span><span class="p">,</span> <span class="n">canPublish_func</span><span class="p">)</span>
+
+    <span class="c1"># populate variables and run processor</span>
+    <span class="n">proc</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s1">&#39;toc&#39;</span><span class="p">:</span> <span class="s1">&#39;no effect&#39;</span><span class="p">,</span> <span class="s1">&#39;hasMath&#39;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
+              <span class="s1">&#39;addedVariable&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">]})</span>
+
+    <span class="c1"># dump file</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">proc</span><span class="o">.</span><span class="n">dumpFileData</span><span class="p">())</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Final Output:</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
+title: EditFrontMatter Class Example 1
+description: Edit 2 fields in this front matter
+catagories:
+<span class="k">-</span> programming
+<span class="k">-</span> python
+<span class="k">-</span> markdown
+tags:
+<span class="k">-</span> front matter
+<span class="k">-</span> administration
+<span class="k">-</span> testing
+author: Karl N. Redman
+creatordisplayname: Karl N. Redman
+creatoremail: karl.redman@example.com
+date: 2019-05-23 22:43:45
+lastmodifierdisplayname: Karl N. Redman
+lastmodifieremail: karl.redman@gmail.com
+lastmod: 2019-05-23 22:43:45
+toc: true
+type: page
+hasMath: false
+draft: true
+weight: 5
+stuff:
+<span class="k">-</span> one
+<span class="k">-</span> two
+<span class="k">-</span> three
+---
+
+<span class="gh">#</span> EditFontMatter Class Example 1
+
+Edit several fields of front matter.
+
+<span class="gu">##</span> Fields affected in this example:
+
+<span class="k">*</span> toc
+  <span class="k">*</span> note: uses local template variable
+  <span class="k">*</span> pre: false
+  <span class="k">*</span> post: true
+<span class="k">*</span> draft:
+  <span class="k">*</span> note: uses jinja2 filter (callback)
+  <span class="k">*</span> pre: false
+  <span class="k">*</span> post: true
+<span class="k">*</span> hasMath
+  <span class="k">*</span> note: uses program variable
+  <span class="k">*</span> pre: true
+  <span class="k">*</span> post: false
+<span class="k">*</span> stuff:
+  <span class="k">*</span> note: uses program variable to create field
+  <span class="k">*</span> pre: did not exist
+  <span class="k">*</span> post: (list) [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;]
+<span class="k">*</span> deleteme:
+  <span class="k">*</span> note: removed from final result
+  <span class="k">*</span> pre: this will be deleted
+  <span class="k">*</span> post: N/A
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+	
+    <a href="https://github.com/karlredman/EditFrontMatter" target="_blank">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="">
+		</a>
+	
+
+
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Karl N. Redman
+      <span class="lastupdated">
+        Last updated on Jun 09, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

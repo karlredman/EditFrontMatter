@@ -1,0 +1,585 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sphinx config.py &mdash; EditFrontMatter 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://karlredman.github.io/EditFrontMatterabout_theme/conf.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_customization.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sphinx RTD boilerplate Readme" href="theme_readme.html" />
+    <link rel="prev" title="RTD Theme Developer Notes" href="dev_notes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EditFrontMatter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+	<center><font color="gray">Current Release: 0.0.1</font></center>
+	<hr style="height:1px; border:none; color:#000; background-color:#000;">
+
+	<a href="https://github.com/karlredman/EditFrontMatter"><font color="#76D7C4">Github Project Page</font></a>
+	<a href="https://pypi.org/project/EditFrontMatter"><font color="#76D7C4">PyPi Project Page</font></a>
+	
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Full Features List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">EditFrontMatter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../editfrontmatter/editfrontmatter.html">Edit Front Matter Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.html">Class: EditFrontMatter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.html">add_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.html">del_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html">dumpFileData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html">dumpFrontMatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data.html">has_source_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml.html">has_source_yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html">readFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.run.html">run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.html">set_yaml_delim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html">writeFile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.html">Class: EditFrontMatter_Exception</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.__init__.html">__init__</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../programs.html">Example Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example1/index.html">EditFrontMatter: Example 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example1/readme.html">EditFrontMatter: Example 1 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example1/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example1/example1.html"><em>Basic Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example2/index.html">EditFrontMatter: Example 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example2/readme.html">EditFrontMatter: Example 2 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example2/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example2/example2.html"><em>Advanced, Multi-Pass, Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example3/index.html">EditFrontMatter: Example 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example3/readme.html">EditFrontMatter: Example 3 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#program-flow">Program flow:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#constraints">Constraints:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#running-the-program">Running the program:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#example-input-output">Example Input / Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example3/example3.html"><em>Threaded, Directory Walking Example</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#are-these-answers-actually-frequently-asked">Are these answers actually frequently asked?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#why-is-this-project-so-heavily-distractingly-etc-documented">Why is this project so heavily / distractingly / etc. documented?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#why-did-you-write-this-module">Why did you write this module?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#where-is-the-test-suite">Where is the test suite!?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contrib.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contrib.html#editfrontmatter-contributing-guidelines">EditFrontMatter Contributing Guidelines:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html"><span class="raw-html"><font color="gray">Changelog</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_license.html"><span class="raw-html"><font color="gray">Code License</font></span></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="about_theme.html"><span class="raw-html"><font color="#7D6608">About Theme</font></span></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dev_notes.html">RTD Theme Developer Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dev_notes.html#layout">Layout:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dev_notes.html#sphinx-notes">Sphinx Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#references">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#building">Building:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#live-update-dev-server">Live update dev server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#fixes">Fixes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#sphinx-rtd-theme-notes">Sphinx RTD Theme Notes:</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dev_notes.html#id11">References:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dev_notes.html#github-fork-on-github-banner">GitHub ‘Fork on GitHub’ Banner:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dev_notes.html#site-index-on-sidebar">Site index on sidebar</a></li>
+<li class="toctree-l5"><a class="reference internal" href="dev_notes.html#remove-the-word-module-from-the-end-of-sidebar-code-elements">Remove the word “module” from the end of sidebar code elements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dev_notes.html#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#id12">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#pip-install-locally">pip install locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dev_notes.html#theme-style-guide">Theme Style guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#references-for-later-documentation">References (for later documentation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#docstrings-python">Docstrings (python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#things-to-document">Things to Document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#rules">Rules:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dev_notes.html#generating-class-methods-for-use-the-sidebar-toc-and-respective-individual-files">Generating class methods for use the sidebar toc and respective individual files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#before-adding-autosummary-functionality">Before adding autosummary functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#generate-method-files">Generate method files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#maintenance">maintenance:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dev_notes.html#include-mardown-document-in-rest">Include mardown document in reST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dev_notes.html#boilerplate-features">Boilerplate features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#configurables">configurables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dev_notes.html#replacement-text-restrictions-in-the-docstring-for-config-py">replacement text restrictions in the docstring for config.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sphinx config.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theme_readme.html">Sphinx RTD boilerplate Readme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theme_readme.html#running-building-and-testing">Running, Building and Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="theme_readme.html#running-example-apps">Running example apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="theme_readme.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="theme_readme.html#testing-documentation-examples-via-doctest">Testing documentation examples via <code class="docutils literal notranslate"><span class="pre">doctest</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+	<a href="https://karlredman.github.io"><font color="#7D6608">Author's Homepage</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/genindex.html"><font color="#196F3D">Overview: Source Code Function Index</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/_modules/index.html"><font color="#196F3D">Overview: Source Code Index</font></a>
+
+
+	<!-- <hr style="height:1px; border:none; border-top: dashed 1px; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top:dashed; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top: dashed 1px; color:#000; background-color#000" /> -->
+	<!-- <hr style="border-top: dashed 1px;" /> -->
+	<!-- <a href="https://karlredman.github.io"><font color="#F7DC6F">Author's Homepage</font></a> -->
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EditFrontMatter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="about_theme.html"><span class="raw-html"><font color="#7D6608">About Theme</font></span></a> &raquo;</li>
+        
+      <li>Sphinx config.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/karlredman/EditFrontMatter/blob/master/docsource/source/conf.py" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="theme_readme.html" class="btn btn-neutral float-right" title="Sphinx RTD boilerplate Readme" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dev_notes.html" class="btn btn-neutral float-left" title="RTD Theme Developer Notes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-conf"></span><div class="section" id="module-conf.py">
+<span id="sphinx-config-py"></span><h1>Sphinx config.py<a class="headerlink" href="#module-conf.py" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list">
+<dt class="field-odd">Synopsis</dt>
+<dd class="field-odd"><p>Sphinx config file.</p>
+</dd>
+<dt class="field-even">Description</dt>
+<dd class="field-even"><p>This is an early version of a Sphinx RTD theme boilerplate <cite>config.py</cite> file.
+Future versions will be better organized and will, eventually, be
+configurable from yaml.</p>
+<p>Reasons for this <cite>config.py</cite> structure:</p>
+<blockquote>
+<div><ul>
+<li><p>enforce precedence</p></li>
+<li><p>compartmentalized configuration topics</p></li>
+<li><p>increase maintainability</p></li>
+<li><p>preparation for implementing dynamic variable instantiation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>configuration will move to yaml format</p></li>
+<li><p>Sphinx API will be used to manage configuration entities</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</dd>
+<dt class="field-odd">Platform</dt>
+<dd class="field-odd"><p>Unix, Windows, python &gt;=v3.6.8</p>
+</dd>
+<dt class="field-even">Dependencies</dt>
+<dd class="field-even"><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>alabaster==0.7.12
+Babel==2.6.0
+certifi==2019.3.9
+chardet==3.0.4
+docutils==0.14
+idna==2.8
+imagesize==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+packaging==19.0
+Pygments==2.4.0
+pyparsing==2.4.0
+pytz==2019.1
+requests==2.22.0
+six==1.12.0
+snowballstemmer==1.2.1
+Sphinx==2.0.1
+sphinx-rtd-theme==0.4.3
+sphinxcontrib-applehelp==1.0.1
+sphinxcontrib-devhelp==1.0.1
+sphinxcontrib-htmlhelp==1.0.2
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.2
+sphinxcontrib-serializinghtml==1.1.3
+urllib3==1.25.3
+</pre></div>
+</div>
+</dd>
+<dt class="field-odd">License</dt>
+<dd class="field-odd"><p><a class="reference download external" download="" href="https://github.com/rtfd/sphinx_rtd_theme/blob/master/LICENSE"><code class="xref download docutils literal notranslate"><span class="pre">Sphinx</span> <span class="pre">RTD</span> <span class="pre">Theme</span> <span class="pre">Project</span> <span class="pre">Owner:</span> <span class="pre">MIT</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/102640910dce9027edff96c06af44569/LICENSE"><code class="xref download docutils literal notranslate"><span class="pre">RTD</span> <span class="pre">Boilerplate:</span> <span class="pre">`MIT</span></code></a></p>
+<p><a class="reference download internal" download="" href="../_downloads/102640910dce9027edff96c06af44569/LICENSE"><code class="xref download docutils literal notranslate"><span class="pre">EditFrontMatter:</span> <span class="pre">`MIT</span></code></a></p>
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd">Module Author</dt>
+<dd class="field-odd"><p>Karl N. Redman</p>
+</dd>
+<dt class="field-even">homepage</dt>
+<dd class="field-even"><p><a class="reference external" href="https://karlredman.github.io/spinx-rtd-boilerplate">Sphinx RTD Boilerplate</a></p>
+<p><a class="reference external" href="https://karlredman.github.io/EditFrontMatter">EditFrontMatter</a></p>
+</dd>
+<dt class="field-odd">Current Release</dt>
+<dd class="field-odd"><p>version: 0.0.1</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.0.1: </span>Initial Version</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Module attributes below</p>
+</div>
+<dl class="function">
+<dt id="conf.path_setup">
+<code class="descname">path_setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#path_setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.path_setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path setup: If extensions (or modules to document with autodoc) are in
+another directory, add these directories to sys.path here. If the directory
+is relative to the documentation root, use os.path.abspath to make it
+absolute, like shown here.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="conf.sphinx_setup">
+<code class="descname">sphinx_setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#sphinx_setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.sphinx_setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sphinx setup config variables</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="conf.runtime_setup">
+<code class="descname">runtime_setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#runtime_setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.runtime_setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard boilerplate variables</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="conf.extensions_setup">
+<code class="descname">extensions_setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#extensions_setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.extensions_setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add any Sphinx extension module names here, as strings. They can be
+extensions coming with Sphinx (named ‘sphinx.ext.*’) or your custom
+ones.</p>
+<dl class="field-list">
+<dt class="field-odd">Extensions (alphabetical)</dt>
+<dd class="field-odd"><ul>
+<li><p><a class="reference external" href="https://pypi.org/project/m2r/">m2r</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>M2R converts a markdown file including reStructuredText (rst)
+markups to a valid rst format.</p></li>
+<li><p>Likely to cause warnings for some markdown <cite>pygments</cite> highlighting
+code blocks.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">sphinx.ext.autodoc</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Include documentation from docstrings.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html">sphinx.ext.autosummary</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Generate autodoc summaries</p></li>
+<li><p>Likely to cause <cite>duplicat object</cite> definition warnings that seem to
+be unfixable.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html">sphinx.ext.doctest</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Test snippets in the documentation</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/githubpages.html">sphinx.ext.githubpages</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Publish HTML docs in GitHub Pages</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html">sphinx.ext.intersphinx</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Link to other projects’ documentation</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html">sphinx.ext.napoleon</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Support for <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">NumPy</a>
+and <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#Comments">Google</a>
+style docstrings.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/latest/usage/extensions/todo.html">sphinx.ext.todo</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Support for todo items</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html">sphinx.ext.viewcode</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add links to highlighted source code</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="conf.html_config">
+<code class="descname">html_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#html_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.html_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sphinx HTML config</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="conf.html_theme_options_config">
+<code class="descname">html_theme_options_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#html_theme_options_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.html_theme_options_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="conf.extensions_config">
+<code class="descname">extensions_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#extensions_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.extensions_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="conf.rst_epilog_config">
+<code class="descname">rst_epilog_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#rst_epilog_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.rst_epilog_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string of reST that will be included at the end of every source
+file that is read. This is a possible place to add substitutions that should be
+available in every file (another being <cite>rst_prolog</cite>).</p>
+<p>Note that this string will not replace document titles due to the order by which
+files are processed relative to hierarchical <cite>toctree</cite> directives.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="conf.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><em>app</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/conf.html#setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#conf.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>setup custom directives for execution of the app, e.g.
+<cite>app.add_stylesheet()</cite></p>
+<div class="admonition-references admonition">
+<p class="admonition-title">References</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html?highlight=app">Sphinx api documentation</a></p>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+	
+    <a href="https://github.com/karlredman/EditFrontMatter" target="_blank">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="">
+		</a>
+	
+
+
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Karl N. Redman
+      <span class="lastupdated">
+        Last updated on Jun 09, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

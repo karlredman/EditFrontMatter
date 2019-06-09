@@ -1,0 +1,795 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>editfrontmatter.EditFrontMatter &mdash; EditFrontMatter 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://karlredman.github.io/EditFrontMatter_modules/editfrontmatter/EditFrontMatter.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/theme_customization.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EditFrontMatter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+	<center><font color="gray">Current Release: 0.0.1</font></center>
+	<hr style="height:1px; border:none; color:#000; background-color:#000;">
+
+	<a href="https://github.com/karlredman/EditFrontMatter"><font color="#76D7C4">Github Project Page</font></a>
+	<a href="https://pypi.org/project/EditFrontMatter"><font color="#76D7C4">PyPi Project Page</font></a>
+	
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features.html">Full Features List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">EditFrontMatter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.html">Edit Front Matter Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.html">Class: EditFrontMatter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.html">add_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.html">del_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html">dumpFileData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html">dumpFrontMatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data.html">has_source_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml.html">has_source_yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html">readFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.run.html">run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.html">set_yaml_delim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html">writeFile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.html">Class: EditFrontMatter_Exception</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.__init__.html">__init__</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../programs.html">Example Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example1/index.html">EditFrontMatter: Example 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/example1/readme.html">EditFrontMatter: Example 1 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/example1/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/example1/example1.html"><em>Basic Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example2/index.html">EditFrontMatter: Example 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/example2/readme.html">EditFrontMatter: Example 2 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/example2/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/example2/example2.html"><em>Advanced, Multi-Pass, Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/example3/index.html">EditFrontMatter: Example 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/example3/readme.html">EditFrontMatter: Example 3 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/example3/readme.html#program-flow">Program flow:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/example3/readme.html#constraints">Constraints:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/example3/readme.html#running-the-program">Running the program:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../examples/example3/readme.html#example-input-output">Example Input / Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/example3/example3.html"><em>Threaded, Directory Walking Example</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#are-these-answers-actually-frequently-asked">Are these answers actually frequently asked?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#why-is-this-project-so-heavily-distractingly-etc-documented">Why is this project so heavily / distractingly / etc. documented?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#why-did-you-write-this-module">Why did you write this module?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faq.html#where-is-the-test-suite">Where is the test suite!?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contrib.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contrib.html#editfrontmatter-contributing-guidelines">EditFrontMatter Contributing Guidelines:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html"><span class="raw-html"><font color="gray">Changelog</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_license.html"><span class="raw-html"><font color="gray">Code License</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about_theme/about_theme.html"><span class="raw-html"><font color="#7D6608">About Theme</font></span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about_theme/dev_notes.html">RTD Theme Developer Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#layout">Layout:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#sphinx-notes">Sphinx Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#references">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#building">Building:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#live-update-dev-server">Live update dev server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#fixes">Fixes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#sphinx-rtd-theme-notes">Sphinx RTD Theme Notes:</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../about_theme/dev_notes.html#id11">References:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../about_theme/dev_notes.html#github-fork-on-github-banner">GitHub ‘Fork on GitHub’ Banner:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../about_theme/dev_notes.html#site-index-on-sidebar">Site index on sidebar</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../about_theme/dev_notes.html#remove-the-word-module-from-the-end-of-sidebar-code-elements">Remove the word “module” from the end of sidebar code elements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#id12">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#pip-install-locally">pip install locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#theme-style-guide">Theme Style guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#references-for-later-documentation">References (for later documentation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#docstrings-python">Docstrings (python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#things-to-document">Things to Document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#rules">Rules:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#generating-class-methods-for-use-the-sidebar-toc-and-respective-individual-files">Generating class methods for use the sidebar toc and respective individual files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#before-adding-autosummary-functionality">Before adding autosummary functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#generate-method-files">Generate method files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#maintenance">maintenance:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#include-mardown-document-in-rest">Include mardown document in reST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#boilerplate-features">Boilerplate features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#configurables">configurables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#replacement-text-restrictions-in-the-docstring-for-config-py">replacement text restrictions in the docstring for config.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about_theme/conf.html">Sphinx config.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about_theme/theme_readme.html">Sphinx RTD boilerplate Readme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/theme_readme.html#running-building-and-testing">Running, Building and Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/theme_readme.html#running-example-apps">Running example apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/theme_readme.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/theme_readme.html#testing-documentation-examples-via-doctest">Testing documentation examples via <code class="docutils literal notranslate"><span class="pre">doctest</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+	<a href="https://karlredman.github.io"><font color="#7D6608">Author's Homepage</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/genindex.html"><font color="#196F3D">Overview: Source Code Function Index</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/_modules/index.html"><font color="#196F3D">Overview: Source Code Index</font></a>
+
+
+	<!-- <hr style="height:1px; border:none; border-top: dashed 1px; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top:dashed; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top: dashed 1px; color:#000; background-color#000" /> -->
+	<!-- <hr style="border-top: dashed 1px;" /> -->
+	<!-- <a href="https://karlredman.github.io"><font color="#F7DC6F">Author's Homepage</font></a> -->
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EditFrontMatter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>editfrontmatter.EditFrontMatter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+            
+  <h1>Source code for editfrontmatter.EditFrontMatter</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Edit Front Matter Module</span>
+<span class="sd">==============================</span>
+
+<span class="sd">.. module:: editfrontmatter</span>
+
+<span class="sd">:Synopsis: A thread safe class that uses Jinja2 templating to edit yaml front</span>
+<span class="sd">    matter within text files. This class is intended to be used for batch processing.</span>
+
+<span class="sd">:Platform: Unix, Windows, |python_version|</span>
+
+<span class="sd">:Dependencies:</span>
+
+<span class="sd">    .. literalinclude:: ../../../requirements.txt</span>
+<span class="sd">        :language: text</span>
+
+<span class="sd">:License: `MIT &lt;https://karlredman.github.io/EditFrontMatter/LICENSE&gt;`_</span>
+
+<span class="sd">.. :moduleauthor: `Karl N. Redman &lt;https://karlredman.github.io&gt;`_</span>
+
+<span class="sd">:Module Author: `Karl N. Redman &lt;https://karlredman.github.io&gt;`_</span>
+
+<span class="sd">:Current Release:</span>
+<span class="sd">    version: |release|</span>
+
+<span class="sd">.. versionadded:: 0.0.1</span>
+<span class="sd">    Initial Version</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Imports</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">import</span> <span class="nn">oyaml</span> <span class="k">as</span> <span class="nn">yaml</span>    <span class="c1"># preserve yaml dict order</span>
+<span class="kn">import</span> <span class="nn">jinja2</span>
+
+
+<div class="viewcode-block" id="EditFrontMatter_Exception"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.html#editfrontmatter.EditFrontMatter.EditFrontMatter_Exception">[docs]</a><span class="k">class</span> <span class="nc">EditFrontMatter_Exception</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Custom exception handler for EditFrontMatter Project&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EditFrontMatter_Exception.__init__"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.__init__.html#editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">exc</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :Description:</span>
+<span class="sd">            A custom exception handler for the module. Provides a simplified output message for debugging.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            msg (str):</span>
+<span class="sd">                A custom messsage for the exception caught in the code</span>
+<span class="sd">            exc (Exception):</span>
+<span class="sd">                Original exception object from try block</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Exception obj</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">msg</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">    {str(exc)}&quot;</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    Error @ </span><span class="si">{filename}</span><span class="s1">, Line </span><span class="si">{linenum}</span><span class="s1"> in </span><span class="si">{funcname}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">    &gt;&gt;&gt;&gt; </span><span class="si">{source}</span><span class="s1">&#39;</span>
+
+        <span class="k">for</span> <span class="n">tb_info</span> <span class="ow">in</span> <span class="n">traceback</span><span class="o">.</span><span class="n">extract_tb</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">):</span>
+            <span class="n">filename</span><span class="p">,</span> <span class="n">linenum</span><span class="p">,</span> <span class="n">funcname</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">tb_info</span>
+
+            <span class="k">if</span> <span class="n">funcname</span> <span class="o">!=</span> <span class="s1">&#39;&lt;module&gt;&#39;</span><span class="p">:</span>
+                <span class="n">funcname</span> <span class="o">=</span> <span class="n">funcname</span> <span class="o">+</span> <span class="s1">&#39;()&#39;</span>
+                <span class="n">msg</span> <span class="o">+=</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span>
+                    <span class="n">linenum</span><span class="o">=</span><span class="n">linenum</span><span class="p">,</span>
+                    <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span>
+                    <span class="n">funcname</span><span class="o">=</span><span class="n">funcname</span><span class="p">)</span>
+
+        <span class="c1"># actual traceback</span>
+        <span class="c1"># tbe = &#39;&#39;.join(traceback.TracebackException(exc.__class__, exc, exc.__traceback__).format())</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;EditFrontMatter_Exception: </span><span class="si">{msg}</span><span class="s2">&quot;</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="EditFrontMatter"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.html#editfrontmatter.EditFrontMatter.EditFrontMatter">[docs]</a><span class="k">class</span> <span class="nc">EditFrontMatter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Main Class for module&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="EditFrontMatter.__init__"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html#editfrontmatter.EditFrontMatter.EditFrontMatter.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span>
+        <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">jinja2_env</span><span class="o">=</span><span class="n">jinja2</span><span class="o">.</span><span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+        <span class="n">template_str</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">yaml_delim</span><span class="o">=</span><span class="s1">&#39;---&#39;</span><span class="p">,</span>
+        <span class="n">keys_toDelete</span><span class="o">=</span><span class="p">[],</span>
+        <span class="n">do_readFile</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Main class for the module. Programmatically Adds / Updates / Deletes yaml \</span>
+<span class="sd">            front matter elements embedded in text/markdown files.</span>
+
+<span class="sd">        Hint:</span>
+<span class="sd">            This class uses keyword only arguments. Inheriting this class would</span>
+<span class="sd">            look something like the following::</span>
+
+<span class="sd">                class Derived_EditFrontMatter (EditFrontMatter):</span>
+<span class="sd">                    def __init__(self,**kwargs):</span>
+<span class="sd">                        EditFrontMatter.__init__(self, **kwargs)</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            yaml_delim (str):</span>
+<span class="sd">                yaml file section delimiter (i.e. &quot;---&quot;)used to locate the source</span>
+<span class="sd">                file&#39;s embedded yaml section.</span>
+
+<span class="sd">            do_readFile (bool):</span>
+<span class="sd">                allow instantiation without implicit</span>
+<span class="sd">                :func:`readFile` call</span>
+
+
+<span class="sd">        Attributes:</span>
+
+<span class="sd">            self.file_lines (list):</span>
+<span class="sd">                Lines from the data source file. Must be managed after creating the</span>
+<span class="sd">                class object if `__init__(do_readFile=False)`</span>
+
+<span class="sd">            self.file_path (str):</span>
+<span class="sd">                Path of source data file. Superfluous if :func:`readFile` is never called</span>
+
+<span class="sd">            self.fmatter (yaml):</span>
+<span class="sd">                [default: empty :class:`dict` if yaml not found]</span>
+<span class="sd">                Front matter as a yaml object. Set in :func:`readFile`.</span>
+
+<span class="sd">            self.yaml_delim (str):</span>
+<span class="sd">                [default:&quot;---&quot;]</span>
+<span class="sd">                Front matter delimiter. Can be used to change front matter delimter</span>
+<span class="sd">                between reading the source file into :attr:`file_lines` and executing</span>
+<span class="sd">                :func:`dumpFrontMatter`/:func:`writeFile`.</span>
+
+<span class="sd">            self.yamlSeperator_pattern (:func:`re.compile`):</span>
+<span class="sd">                Regex patten for the yaml line delimiter. only used if :func:`readFile` is called</span>
+
+<span class="sd">            self.yaml_start (int):</span>
+<span class="sd">                Beginning of the yaml blob in the original source file. Set in :func:`readFile`</span>
+
+<span class="sd">            self.yaml_end (int):</span>
+<span class="sd">                End of the yaml blob in the origional source file. Set in :func:`readFile`</span>
+
+<span class="sd">            self.template_str (str):</span>
+<span class="sd">                Contains the jinja2 template. Can be manipulated between class</span>
+<span class="sd">                instantiation and executing :func:`run`</span>
+
+<span class="sd">            self.jinja2_env (jinja2.Environment):</span>
+<span class="sd">                This object can be specified during class instantiation if greater control is required</span>
+
+<span class="sd">            self.keys_toDelete (list):</span>
+<span class="sd">                keys to be deleted from :attr:`fmatter` object. Utilized at the end of the :func:`run` method</span>
+
+<span class="sd">        Throws:</span>
+<span class="sd">            :class:`EditFrontMatter_Exception`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># critical defaults</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaml_end</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_empty</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="c1"># file info</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="o">=</span> <span class="n">file_path</span>
+
+        <span class="c1"># yaml processing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaml_delim</span> <span class="o">=</span> <span class="n">yaml_delim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yamlSeperator_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;^&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_delim</span> <span class="o">+</span> <span class="s2">&quot;.*&quot;</span><span class="p">)</span>
+
+        <span class="c1"># jinja2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">template_str</span> <span class="o">=</span> <span class="n">template_str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">jinja2_env</span> <span class="o">=</span> <span class="n">jinja2_env</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">keys_toDelete</span> <span class="o">=</span> <span class="n">keys_toDelete</span>
+
+        <span class="c1"># possibly postpone reading the file</span>
+        <span class="k">if</span> <span class="n">do_readFile</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">readFile</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.set_yaml_delim"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.html#editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim">[docs]</a>    <span class="k">def</span> <span class="nf">set_yaml_delim</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delim</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Set the yaml delimiter and compile it.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            delim (str):</span>
+<span class="sd">                A string to use as a delimiter for finding and editing</span>
+<span class="sd">                frontmatter in a file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaml_delim</span> <span class="o">=</span> <span class="n">delim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yamlSeperator_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;^&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_delim</span> <span class="o">+</span> <span class="s2">&quot;.*&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.readFile"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile">[docs]</a>    <span class="k">def</span> <span class="nf">readFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Read a file into :attr:`file_lines` list (if applicable) and</span>
+<span class="sd">            seperate the front matter into :attr:`fmatter` yaml object. This</span>
+<span class="sd">            function resets :attr:`fmatter`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            file_path (str): optional file path</span>
+
+<span class="sd">        Hint:</span>
+<span class="sd">            If *local* `file_path`:`None` and :attr:`file_path`:`None`,</span>
+<span class="sd">            :attr:`file_lines` should be populated before calling this</span>
+<span class="sd">            function.</span>
+
+<span class="sd">            In the example below, the initialization would fail if</span>
+<span class="sd">            `do_readFile:True`::</span>
+
+<span class="sd">                proc = EditFrontMatter(do_readFile=False)</span>
+<span class="sd">                proc.file_lines = &#39;&#39;.join(open(RUN_PATH + &quot;example.md&quot;, &quot;r&quot;).readlines())</span>
+<span class="sd">                # initialize proc.fmatter and record data position</span>
+<span class="sd">                proc.readFile()</span>
+<span class="sd">                ...</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            If the file source content is empty :attr:`file_empty` is set to</span>
+<span class="sd">            `True`. This affects :func:`dumpFileData` and :func:`writeFile`</span>
+<span class="sd">            behavior</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">file_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="o">=</span> <span class="n">file_path</span>
+
+        <span class="c1"># if no file path, user is managing `file_lines` outside of the class</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># with open(file_path, &quot;r&quot;) as fo:</span>
+            <span class="c1">#     self.file_lines = fo.readlines()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">file_lines</span> <span class="o">=</span> <span class="n">fo</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="kn">import</span> <span class="nn">sys</span>
+                <span class="n">t</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+                <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;self.file_path: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+
+        <span class="c1"># yaml data re-init / paranoia</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yaml_end</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fmatter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_empty</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="n">yaml_lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">line_num</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># find the beg. and end separators</span>
+        <span class="c1"># populate yaml_lines</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_lines</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">yamlSeperator_pattern</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="o">=</span> <span class="n">line_num</span>
+                <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_end</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">yaml_end</span> <span class="o">=</span> <span class="n">line_num</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="c1"># no yaml section found</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">yaml_end</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">yaml_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">line_num</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># TODO: start != Note and end == None</span>
+
+        <span class="c1"># set fmatter obj -empty dict if yaml not found</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fmatter</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">yaml_lines</span><span class="p">),</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{}</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># probably a bad file (i.e. missing ending yaml delimiter</span>
+            <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;yaml.load error -&gt; self.file_path: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.writeFile"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile">[docs]</a>    <span class="k">def</span> <span class="nf">writeFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Write to arg `file_path`, attr :attr:`file_path`</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            If the original file source data was empty after a call to</span>
+<span class="sd">            :func:`readFile`, no attempt is maid to write to the file.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            file_path (str):</span>
+<span class="sd">                optional file path</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            * `True` if file was written</span>
+<span class="sd">            * &#39;False` if file was **not** written</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_source_data</span><span class="p">():</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">file_path</span><span class="p">:</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
+                <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dumpFileData</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;write to file -&gt; self.file_path: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.add_JinjaFilter"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter">[docs]</a>    <span class="k">def</span> <span class="nf">add_JinjaFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Add a `Jinja filter &lt;http://jinja.pocoo.org/docs/2.10/templates/#filters&gt;`_</span>
+<span class="sd">            for setting a jinja2 template variable programmatically through callback.</span>
+
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str):</span>
+<span class="sd">                Jinja template variable name</span>
+<span class="sd">            func (object):</span>
+<span class="sd">                callback function that will set `name`</span>
+
+
+<span class="sd">        :Example of implementing a filter for callback:</span>
+
+<span class="sd">            Programatically change the value of `draft` field in the source</span>
+<span class="sd">            document `example1.md` using a Jinja2 filter</span>
+
+<span class="sd">            :jinja2 template:</span>
+
+<span class="sd">            .. literalinclude:: ../../../examples/data/template1.j2</span>
+<span class="sd">                :language: jinja</span>
+
+<span class="sd">            :mardown file:</span>
+
+<span class="sd">            .. literalinclude:: ../../../examples/data/example1.md</span>
+<span class="sd">                :language: md</span>
+
+<span class="sd">            :Example code:</span>
+
+<span class="sd">            .. testcode::</span>
+
+<span class="sd">                from editfrontmatter import EditFrontMatter</span>
+<span class="sd">                import os</span>
+
+<span class="sd">                # a jinja2 filter callback function</span>
+<span class="sd">                def canPublish_func(val):</span>
+<span class="sd">                    # do some processing....</span>
+<span class="sd">                    return True</span>
+
+<span class="sd">                # stringify the template file</span>
+<span class="sd">                template_str = &#39;&#39;.join(open(os.environ.get(&quot;TEST_DATA_DIR&quot;) +</span>
+<span class="sd">                    &quot;template1.j2&quot;, &quot;r&quot;).readlines())</span>
+
+<span class="sd">                # creating object</span>
+<span class="sd">                obj = EditFrontMatter(file_path = os.environ.get(&quot;TEST_DATA_DIR&quot;) + &quot;example1.md&quot;,</span>
+<span class="sd">                        template_str = template_str)</span>
+
+<span class="sd">                # set `canPublish_func` function for our `draft` field callback using</span>
+<span class="sd">                # `canPublish` template variable.</span>
+<span class="sd">                obj.add_JinjaFilter(&#39;canPublish&#39;, canPublish_func)</span>
+
+<span class="sd">                # process the front matter from &#39;example1.md&#39;. `draft` in the front</span>
+<span class="sd">                # matter will be set to `true`</span>
+<span class="sd">                obj.run()</span>
+
+<span class="sd">                # print the new file contents (uncomment to see dump)</span>
+<span class="sd">                # print(obj.dumpFileData())</span>
+<span class="sd">                &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">jinja2_env</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.del_JinjaFilter"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter">[docs]</a>    <span class="k">def</span> <span class="nf">del_JinjaFilter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Delete a Jinja filter.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name (str):</span>
+<span class="sd">                filter key</span>
+
+<span class="sd">        :returns:</span>
+<span class="sd">            * True if filter found and deleted</span>
+<span class="sd">            * False if filter not found</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: check filter exists (assert?)</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">jinja2_env</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.dumpFrontMatter"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter">[docs]</a>    <span class="k">def</span> <span class="nf">dumpFrontMatter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Dump `fmatter` as a string</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            :attr:`fmatter` content as a string</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fmatter</span><span class="p">,</span> <span class="n">default_flow_style</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.dumpFileData"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData">[docs]</a>    <span class="k">def</span> <span class="nf">dumpFileData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Concatenate frontmatter with original content and return as a string.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            * A string formed by the concatination of :attr:`fmatter` and \</span>
+<span class="sd">                :attr:`file_lines` (if file souce content is **not** empty* **and** yaml was present).</span>
+
+<span class="sd">            * An empty string if file source content is empty *or* original \</span>
+<span class="sd">                yaml was *not* present.</span>
+
+<span class="sd">        Hint:</span>
+<span class="sd">            :attr:`fmatter` and :attr:`file_lines` are still available if needed</span>
+<span class="sd">            beyond this method. One way of managing this data would be to</span>
+<span class="sd">            manually prepend yaml front matter to :attr:`file_lines` and rerun</span>
+<span class="sd">            :func:`readFile` before calling this function again.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># accomidate for empty file or accomidate for empty front matter</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_source_data</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_source_yaml</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_delim</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">dumpFrontMatter</span><span class="p">()</span> <span class="o">+</span> \
+                <span class="bp">self</span><span class="o">.</span><span class="n">yaml_delim</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_lines</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">yaml_end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.has_source_yaml"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml.html#editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml">[docs]</a>    <span class="k">def</span> <span class="nf">has_source_yaml</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Checks if the yaml is empty after a call to :func:`readFile`</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">            This return value does not rely on :attr:`fmatter` since that</span>
+<span class="sd">            attribute is subject to change once :func:`readFile` is called.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            * `True` if the *original* source file data did have a yaml section</span>
+
+<span class="sd">            * `False` if the *original* source file data did *not* have a yaml section</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaml_end</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.has_source_data"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data.html#editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data">[docs]</a>    <span class="k">def</span> <span class="nf">has_source_data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; Checks if the source file data is empty</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            * `True` if the source data content **is** empty</span>
+<span class="sd">            * `False`  if the source data is **not** empty</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">True</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_lines</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="EditFrontMatter.run"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.run.html#editfrontmatter.EditFrontMatter.EditFrontMatter.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extraVars_dict</span><span class="o">=</span><span class="p">{},</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Process the front matter changes and delete previously specified yaml keys.</span>
+
+<span class="sd">        Variables to change yaml data are passed as a dictionary argument as `extraVars_dict`.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            extraVars_dict (dict):</span>
+<span class="sd">                key,value pairs to be set or added in the :attr:`fmatter` object.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            Call EditFrontMatter.run() with variables to change in</span>
+<span class="sd">            :attr:`fmatter`::</span>
+
+<span class="sd">                proc = EditFrontMatter()</span>
+<span class="sd">                ...</span>
+<span class="sd">                proc.run({&#39;hasMath&#39;: True, &#39;addedVariable&#39;: [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;]})</span>
+<span class="sd">                ...</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># render jinja2 into yaml</span>
+        <span class="n">fmatter_replacement</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">jinja2_env</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">template_str</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">extraVars_dict</span><span class="p">),</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span>
+
+        <span class="c1"># update the original front matter</span>
+        <span class="c1"># TODO: exception if fmatter:None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fmatter</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">fmatter_replacement</span><span class="p">)</span>
+
+        <span class="c1"># remove unwanted keys (preserved order from oyaml&quot;</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys_toDelete</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmatter</span><span class="p">:</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmatter</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+	
+    <a href="https://github.com/karlredman/EditFrontMatter" target="_blank">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="">
+		</a>
+	
+
+
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Karl N. Redman
+      <span class="lastupdated">
+        Last updated on Jun 09, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
