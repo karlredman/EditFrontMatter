@@ -32,7 +32,7 @@
 
 :Dependencies:
 
-    .. literalinclude:: ../../../../examples/requirements.txt
+    .. literalinclude:: ../../../../requirements.txt
         :language: text
 
 :Platform: Unix, Windows, |python_version|

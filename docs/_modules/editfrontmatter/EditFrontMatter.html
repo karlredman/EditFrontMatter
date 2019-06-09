@@ -194,7 +194,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#pre-publishing-checklist">Pre publishing checklist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#id13">References:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#pip-install-locally">pip install locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../about_theme/dev_notes.html#pypy-packaging-steps">pypy packaging steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#pip-install-module-locally-for-development">pip install module locally for development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#prepare-the-package-files">Prepare the package files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#install-distribution-dependiencies">Install distribution dependiencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#build-distribution-artifacts">build distribution artifacts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../about_theme/dev_notes.html#upload-to-pypi">upload to pypi</a></li>
 </ul>
 </li>
 </ul>
@@ -342,7 +349,7 @@
 <span class="sd">        Returns:</span>
 <span class="sd">            Exception obj</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">msg</span> <span class="o">+=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">    {str(exc)}&quot;</span>
+        <span class="n">msg</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">    </span><span class="si">{exc}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exc</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span>
         <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">    Error @ </span><span class="si">{filename}</span><span class="s1">, Line </span><span class="si">{linenum}</span><span class="s1"> in </span><span class="si">{funcname}</span><span class="s1">:</span><span class="se">\n</span><span class="s1">    &gt;&gt;&gt;&gt; </span><span class="si">{source}</span><span class="s1">&#39;</span>
 
         <span class="k">for</span> <span class="n">tb_info</span> <span class="ow">in</span> <span class="n">traceback</span><span class="o">.</span><span class="n">extract_tb</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">):</span>
@@ -358,7 +365,7 @@
 
         <span class="c1"># actual traceback</span>
         <span class="c1"># tbe = &#39;&#39;.join(traceback.TracebackException(exc.__class__, exc, exc.__traceback__).format())</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;EditFrontMatter_Exception: </span><span class="si">{msg}</span><span class="s2">&quot;</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;EditFrontMatter_Exception: </span><span class="si">{msg}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="n">msg</span><span class="p">)</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></div></div>
 
@@ -512,7 +519,8 @@
             <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="kn">import</span> <span class="nn">sys</span>
                 <span class="n">t</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
-                <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;self.file_path: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+                <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="s2">&quot;self.file_path: </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="o">.</span>
+                                                <span class="nb">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
 
         <span class="c1"># yaml data re-init / paranoia</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">yaml_start</span> <span class="o">=</span> <span class="kc">None</span>
@@ -549,7 +557,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">fmatter</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">yaml_lines</span><span class="p">),</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">FullLoader</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{}</span>
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="c1"># probably a bad file (i.e. missing ending yaml delimiter</span>
-            <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;yaml.load error -&gt; self.file_path: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span></div>
+            <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="s2">&quot;yaml.load error -&gt; self.file_path: </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="o">.</span>
+                                            <span class="nb">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span></div>
 
 <div class="viewcode-block" id="EditFrontMatter.writeFile"><a class="viewcode-back" href="../../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile">[docs]</a>    <span class="k">def</span> <span class="nf">writeFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot; Write to arg `file_path`, attr :attr:`file_path`</span>
@@ -576,8 +585,9 @@
         <span class="k">try</span><span class="p">:</span>
             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
                 <span class="n">fo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dumpFileData</span><span class="p">())</span>
-        <span class="k">except</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;write to file -&gt; self.file_path: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+        <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">EditFrontMatter_Exception</span><span class="p">(</span><span class="s2">&quot;write to file -&gt; self.file_path: </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="o">.</span>
+                                            <span class="nb">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">),</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
 
         <span class="k">return</span> <span class="kc">True</span></div>
 

@@ -194,7 +194,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#pre-publishing-checklist">Pre publishing checklist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#id13">References:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#pip-install-locally">pip install locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#pypy-packaging-steps">pypy packaging steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#pip-install-module-locally-for-development">pip install module locally for development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#prepare-the-package-files">Prepare the package files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#install-distribution-dependiencies">Install distribution dependiencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#build-distribution-artifacts">build distribution artifacts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#upload-to-pypi">upload to pypi</a></li>
 </ul>
 </li>
 </ul>
@@ -304,7 +311,7 @@
 
 <span class="sd">    .. Note: literal include is relative to the documentation directory</span>
 
-<span class="sd">    .. literalinclude:: ../../../../examples/requirements.txt</span>
+<span class="sd">    .. literalinclude:: ../../../../requirements.txt</span>
 <span class="sd">        :language: text</span>
 
 <span class="sd">:License: `MIT &lt;https://karlredman.github.io/EditFrontMatter/LICENSE&gt;`_</span>
@@ -396,7 +403,7 @@
             <span class="c1"># we&#39;ll fail gracefully -probably a bad source file (i.e. missing</span>
             <span class="c1"># and yaml_end delimiter</span>
             <span class="k">with</span> <span class="n">print_lock</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Error (exception): @Derived_EditFrontMatter.__init__(): </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error (exception): @Derived_EditFrontMatter.__init__(): </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">EXCEPTION</span> <span class="o">=</span> <span class="kc">True</span></div>
 
 <div class="viewcode-block" id="Derived_EditFrontMatter.run"><a class="viewcode-back" href="../examples/example3/example3.html#example3.Derived_EditFrontMatter.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write_file</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extraVars_dict</span><span class="o">=</span><span class="p">{},</span> <span class="n">keys_toDelete</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -451,13 +458,15 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_source_data</span><span class="p">():</span>
             <span class="c1"># file does not contain any data -punt</span>
             <span class="k">with</span> <span class="n">print_lock</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Error: No source data: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: No source data: </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="o">.</span>
+                      <span class="nb">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
             <span class="n">err</span> <span class="o">=</span> <span class="kc">True</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_source_yaml</span><span class="p">():</span>
             <span class="c1"># file does not contain yaml -punt</span>
             <span class="k">with</span> <span class="n">print_lock</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Error: No source yaml: </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: No source yaml: </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="o">.</span>
+                      <span class="nb">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
             <span class="n">err</span> <span class="o">=</span> <span class="kc">True</span>
 
         <span class="k">try</span><span class="p">:</span>
@@ -472,7 +481,8 @@
         <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
             <span class="c1"># report that the file write failed and move on</span>
             <span class="k">with</span> <span class="n">print_lock</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Error (IOError exception): @EditFrontMatter.run(): </span><span class="si">{self.file_path}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error (IOError exception): @EditFrontMatter.run(): </span><span class="si">{file_path}</span><span class="s2">&quot;</span>
+                      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">filepath</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
             <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
 
 
@@ -521,7 +531,8 @@
     <span class="k">for</span> <span class="n">top</span> <span class="ow">in</span> <span class="n">include_dirs</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">top</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">exclude_dirs</span><span class="p">):</span>
             <span class="c1"># error</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Error: Included dir, </span><span class="si">{top}</span><span class="s2">, found in exclude_dirs list&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Included dir, </span><span class="si">{top}</span><span class="s2">, found in exclude_dirs list&quot;</span><span class="o">.</span>
+                  <span class="nb">format</span><span class="p">(</span><span class="n">top</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
             <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="c1"># build file list by walking the included directories</span>
@@ -562,26 +573,27 @@
                     <span class="n">data</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
                 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
                     <span class="c1"># generic exception handler.... eeep!</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{file_path}</span><span class="s2"> generated an exception: </span><span class="si">{exc}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{file_path}</span><span class="s2"> generated an exception: </span><span class="si">{exc}</span><span class="s2">&quot;</span><span class="o">.</span>
+                          <span class="nb">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> <span class="n">exc</span><span class="o">=</span><span class="n">exc</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="c1"># print the file path and file data returned from run()</span>
                     <span class="c1"># print(f&quot;processed: {file_path}\n{data}&quot;)</span>
 
                     <span class="c1"># just print the file paths</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;processed: </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;processed: </span><span class="si">{file_path}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">))</span>
 
                     <span class="c1"># detect if there was an error -with extra of cheeze</span>
                     <span class="k">if</span> <span class="n">data</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
                         <span class="n">processed_count</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">except</span> <span class="n">Signal_Caught</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="c1"># gracefully shutdown (caught c-c, etc)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Exception: ....shutting down: {str(e)}&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exception: ....shutting down: </span><span class="si">{e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)),</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
         <span class="k">global</span> <span class="n">STOP_ALL</span>
         <span class="n">STOP_ALL</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="c1"># report</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;number of files: {len(files_to_process_list)}&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;number processed: </span><span class="si">{processed_count}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of files: </span><span class="si">{fl}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fl</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">files_to_process_list</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number processed: </span><span class="si">{processed_count}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">processed_count</span><span class="o">=</span><span class="n">processed_count</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">STOP_ALL</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There were errors&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>

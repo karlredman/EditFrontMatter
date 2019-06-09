@@ -54,7 +54,7 @@ class EditFrontMatter_Exception(Exception):
         Returns:
             Exception obj
         """
-        msg += f"\n    {str(exc)}"
+        msg += "\n    {exc}".format(exc=str(exc))
         template = '\n    Error @ {filename}, Line {linenum} in {funcname}:\n    >>>> {source}'
 
         for tb_info in traceback.extract_tb(exc.__traceback__):
@@ -70,7 +70,7 @@ class EditFrontMatter_Exception(Exception):
 
         # actual traceback
         # tbe = ''.join(traceback.TracebackException(exc.__class__, exc, exc.__traceback__).format())
-        msg = f"EditFrontMatter_Exception: {msg}"
+        msg = "EditFrontMatter_Exception: {msg}".format(msg=msg)
 
         super().__init__(msg)
 
@@ -224,7 +224,8 @@ class EditFrontMatter(object):
             except IOError as e:
                 import sys
                 t, v, tb = sys.exc_info()
-                raise EditFrontMatter_Exception(f"self.file_path: {self.file_path}", e) from e
+                raise EditFrontMatter_Exception("self.file_path: {file_path}".
+                                                format(file_path=self.file_path), e) from e
 
         # yaml data re-init / paranoia
         self.yaml_start = None
@@ -261,7 +262,8 @@ class EditFrontMatter(object):
             self.fmatter = yaml.load(''.join(yaml_lines), Loader=yaml.FullLoader) or {}
         except Exception as e:
             # probably a bad file (i.e. missing ending yaml delimiter
-            raise EditFrontMatter_Exception(f"yaml.load error -> self.file_path: {self.file_path}", e) from e
+            raise EditFrontMatter_Exception("yaml.load error -> self.file_path: {file_path}".
+                                            format(file_path=self.file_path), e) from e
 
     def writeFile(self, file_path=None, *args, **kwargs) -> bool:
         """ Write to arg `file_path`, attr :attr:`file_path`
@@ -288,8 +290,9 @@ class EditFrontMatter(object):
         try:
             with open(file_path, "w+") as fo:
                 fo.write(self.dumpFileData())
-        except:
-            raise EditFrontMatter_Exception(f"write to file -> self.file_path: {self.file_path}", e) from e
+        except IOError as e:
+            raise EditFrontMatter_Exception("write to file -> self.file_path: {file_path}".
+                                            format(file_path=self.file_path), e) from e
 
         return True
 

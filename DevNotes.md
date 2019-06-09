@@ -544,12 +544,71 @@ git status --ignored
 
 ### References:
 
-* [How to Publish an Open-Source Python Package to PyPI – Real Python](https://realpython.com/pypi-publish-python-package/)
-* [Minimal Structure — Python Packaging Tutorial](https://python-packaging.readthedocs.io/en/latest/minimal.html)
+* [Packaging Python Projects — Python Packaging User Guide](https://packaging.python.org/tutorials/packaging-projects/)
 
-### pip install locally
+
+## pypy packaging steps
+
+### pip install module locally for development
 
 ```sh
 # cd <project dir>
 pip install -e .
 ```
+
+### Prepare the package files
+
+* configure setup.py
+
+  * References:
+    * [Packaging and distributing projects — Python Packaging User Guide](https://packaging.python.org/guides/distributing-packages-using-setuptools/)
+    * [Welcome to Setuptools’ documentation! — setuptools 41.0.1 documentation](https://setuptools.readthedocs.io/en/latest/index.html)
+    * [How to Publish an Open-Source Python Package to PyPI – Real Python](https://realpython.com/pypi-publish-python-package/#versioning-your-package)
+
+  * Basic layout
+  ```py
+  ```
+
+* create `README.md` file
+  * [Making a PyPI-friendly README — Python Packaging User Guide](https://packaging.python.org/guides/making-a-pypi-friendly-readme/#validating-restructuredtext-markup)
+
+* create `LICENSE` file
+
+### Install distribution dependiencies
+
+```
+# assuming virtualenv
+pip install --upgrade setuptools wheel twine
+```
+
+### build distribution artifacts
+
+* build source dist:
+
+```
+python setup.py sdist
+```
+
+* build wheel
+
+```
+* assumes `pure wheel` (supports py v2 or 3)
+python setup.py bdist_wheel
+```
+
+* verify README compliance / format
+
+```
+twine check dist/*
+```
+
+### upload to pypi
+
+* Test system
+
+```
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+  * Verify project page
+  * verify pip install

@@ -159,7 +159,7 @@ def runtime_setup():
     """The full release version string for the project, including alpha/beta/rc tags."""
 
     # language versions
-    globals()['python_version'] = "3.6.8"
+    globals()['python_version'] = "3.5.3"
     """Minimum python version -used to fill in documentation for modules and other sources."""
 
     # widget behavior

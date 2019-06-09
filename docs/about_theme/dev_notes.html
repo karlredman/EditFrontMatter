@@ -196,7 +196,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#pre-publishing-checklist">Pre publishing checklist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id13">References:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pip-install-locally">pip install locally</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pypy-packaging-steps">pypy packaging steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pip-install-module-locally-for-development">pip install module locally for development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prepare-the-package-files">Prepare the package files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-distribution-dependiencies">Install distribution dependiencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-distribution-artifacts">build distribution artifacts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-to-pypi">upload to pypi</a></li>
 </ul>
 </li>
 </ul>
@@ -935,16 +942,84 @@ editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.rst  editfrontma
 <div class="section" id="id13">
 <h3>References:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://realpython.com/pypi-publish-python-package/">How to Publish an Open-Source Python Package to PyPI – Real Python</a></p></li>
-<li><p><a class="reference external" href="https://python-packaging.readthedocs.io/en/latest/minimal.html">Minimal Structure — Python Packaging Tutorial</a></p></li>
+<li><p><a class="reference external" href="https://packaging.python.org/tutorials/packaging-projects/">Packaging Python Projects — Python Packaging User Guide</a></p></li>
 </ul>
 </div>
-<div class="section" id="pip-install-locally">
-<h3>pip install locally<a class="headerlink" href="#pip-install-locally" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="pypy-packaging-steps">
+<h2>pypy packaging steps<a class="headerlink" href="#pypy-packaging-steps" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pip-install-module-locally-for-development">
+<h3>pip install module locally for development<a class="headerlink" href="#pip-install-module-locally-for-development" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd &lt;project dir&gt;</span>
 pip install -e .
 </pre></div>
 </div>
+</div>
+<div class="section" id="prepare-the-package-files">
+<h3>Prepare the package files<a class="headerlink" href="#prepare-the-package-files" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>configure setup.py</p>
+<ul>
+<li><p>References:</p>
+<ul>
+<li><p><a class="reference external" href="https://packaging.python.org/guides/distributing-packages-using-setuptools/">Packaging and distributing projects — Python Packaging User Guide</a></p></li>
+<li><p><a class="reference external" href="https://setuptools.readthedocs.io/en/latest/index.html">Welcome to Setuptools’ documentation! — setuptools 41.0.1 documentation</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/pypi-publish-python-package/#versioning-your-package">How to Publish an Open-Source Python Package to PyPI – Real Python</a></p></li>
+</ul>
+</li>
+<li><p>Basic layout
+<code class="docutils literal notranslate"><span class="pre">py</span></code></p></li>
+</ul>
+</li>
+<li><p>create <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file</p>
+<ul>
+<li><p><a class="reference external" href="https://packaging.python.org/guides/making-a-pypi-friendly-readme/#validating-restructuredtext-markup">Making a PyPI-friendly README — Python Packaging User Guide</a></p></li>
+</ul>
+</li>
+<li><p>create <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> file</p></li>
+</ul>
+</div>
+<div class="section" id="install-distribution-dependiencies">
+<h3>Install distribution dependiencies<a class="headerlink" href="#install-distribution-dependiencies" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">assuming</span> <span class="n">virtualenv</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="c1">--upgrade setuptools wheel twine</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-distribution-artifacts">
+<h3>build distribution artifacts<a class="headerlink" href="#build-distribution-artifacts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>build source dist:</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">sdist</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>build wheel</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">assumes</span> <span class="o">`</span><span class="n">pure</span> <span class="n">wheel</span><span class="o">`</span> <span class="p">(</span><span class="n">supports</span> <span class="n">py</span> <span class="n">v2</span> <span class="k">or</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">bdist_wheel</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>verify README compliance / format</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">twine</span> <span class="k">check</span> <span class="n">dist</span><span class="cm">/*</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="upload-to-pypi">
+<h3>upload to pypi<a class="headerlink" href="#upload-to-pypi" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Test system</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">twine</span> <span class="n">upload</span> <span class="c1">--repository-url https://test.pypi.org/legacy/ dist/*</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Verify project page</p></li>
+<li><p>verify pip install</p></li>
+</ul>
 </div>
 </div>
 </div>
