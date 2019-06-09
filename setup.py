@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='editfrontmatter',
-    version='0.0.10',
+    version='0.0.1',
     description='Edit front matter with Jinja2 templates',
     url="https://karlredman.github.io/EditFrontMatter",
     project_urls={
