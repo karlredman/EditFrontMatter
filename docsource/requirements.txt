@@ -3,14 +3,23 @@ Babel==2.6.0
 certifi==2019.3.9
 chardet==3.0.4
 docutils==0.14
+-e git+git@github.com:karlredman/EditFrontMatter.git@7a87cf3a07ec9ee1ffbe472d38ab38d6fc50bed1#egg=editfrontmatter
+greenlet==0.4.15
 idna==2.8
 imagesize==1.1.0
 Jinja2==2.10.1
+m2r==0.2.1
 MarkupSafe==1.1.1
+mistune==0.8.4
+msgpack==0.6.1
+neovim==0.3.1
+oyaml==0.9
 packaging==19.0
 Pygments==2.4.0
+pynvim==0.3.2
 pyparsing==2.4.0
 pytz==2019.1
+PyYAML==5.1
 requests==2.22.0
 six==1.12.0
 snowballstemmer==1.2.1

@@ -14,6 +14,7 @@
 
 # Development #
 ###############
+.python-version
 .env
 tags
 session.vim
