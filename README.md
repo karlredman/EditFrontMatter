@@ -26,10 +26,20 @@ editing front matter in markdown files. Front matter is managed via<br>
 
 * [Project Documentation with examples Page](https://karlredman.github.io/EditFrontMatter/)
 
-# Installation:
+## Installation:
 
 ```sh
 pip install editfrontmatter
+```
+
+## Dependencies:
+
+```text
+editfrontmatter>=0.0.1
+Jinja2>=2.10.1
+MarkupSafe>=1.1.1
+oyaml>=0.9
+PyYAML>=5.1
 ```
 
 ## TL;DR Example Usage:
@@ -39,7 +49,7 @@ pip install editfrontmatter
 ```md
 ---
 title: "EditFrontMatter Class Example 1"
-description: "Edit 2 fields in this front matter"
+description: "Edit some fields in this front matter"
 catagories: [programming, python, markdown]
 
 deleteme: this will be deleted
@@ -160,7 +170,7 @@ if __name__ == '__main__':
 ```md
 ---
 title: EditFrontMatter Class Example 1
-description: Edit 2 fields in this front matter
+description: Edit some fields in this front matter
 catagories:
 - programming
 - python

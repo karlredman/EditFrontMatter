@@ -347,11 +347,21 @@ editing front matter in markdown files. Front matter is managed via<span class="
 <li><p><a class="reference external" href="https://karlredman.github.io/EditFrontMatter/">Project Documentation with examples Page</a></p></li>
 </ul>
 </div>
-</div>
 <div class="section" id="installation">
-<h1>Installation:<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h2>Installation:<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install editfrontmatter
 </pre></div>
+</div>
+</div>
+<div class="section" id="dependencies">
+<h2>Dependencies:<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>editfrontmatter&gt;=0.0.1
+Jinja2&gt;=2.10.1
+MarkupSafe&gt;=1.1.1
+oyaml&gt;=0.9
+PyYAML&gt;=5.1
+</pre></div>
+</div>
 </div>
 <div class="section" id="tl-dr-example-usage">
 <h2>TL;DR Example Usage:<a class="headerlink" href="#tl-dr-example-usage" title="Permalink to this headline">¶</a></h2>
@@ -360,7 +370,7 @@ editing front matter in markdown files. Front matter is managed via<span class="
 </ul>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
 title: &quot;EditFrontMatter Class Example 1&quot;
-description: &quot;Edit 2 fields in this front matter&quot;
+description: &quot;Edit some fields in this front matter&quot;
 catagories: [programming, python, markdown]
 
 deleteme: this will be deleted
@@ -479,7 +489,7 @@ Edit several fields of front matter.
 </ul>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
 title: EditFrontMatter Class Example 1
-description: Edit 2 fields in this front matter
+description: Edit some fields in this front matter
 catagories:
 <span class="k">-</span> programming
 <span class="k">-</span> python
@@ -557,7 +567,7 @@ Edit several fields of front matter.
     <p>
         &copy; Copyright 2019, Karl N. Redman
       <span class="lastupdated">
-        Last updated on Jun 09, 2019.
+        Last updated on Jun 11, 2019.
       </span>
 
     </p>

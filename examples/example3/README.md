@@ -25,7 +25,7 @@ The documentation for the program can be found [here](https://karlredman.github.
 * Won't edit files that:
   * are empty
   * contain invalid yaml
-    * that does not starting on first line
+    * that does not start on first line
     * that is missing a begenning or ending section delimiter
     * that is missing yaml
 * (Constraints can be overridden as needed)
@@ -38,6 +38,8 @@ The documentation for the program can be found [here](https://karlredman.github.
 ```
 TEST_DATA_DIR="./data/" example3/example3.py
 ```
+
+* Note: The example program does not alter files by default
 
 ## Example Input / Output
 
