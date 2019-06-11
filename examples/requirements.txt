@@ -1,0 +1,5 @@
+editfrontmatter>=0.0.1
+Jinja2>=2.10.1
+MarkupSafe>=1.1.1
+oyaml>=0.9
+PyYAML>=5.1

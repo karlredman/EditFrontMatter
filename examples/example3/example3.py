@@ -16,7 +16,7 @@
 
     .. Note: literal include is relative to the documentation directory
 
-    .. literalinclude:: ../../../../requirements.txt
+    .. literalinclude:: ../../../../examples/requirements.txt
         :language: text
 
 :License: `MIT <https://karlredman.github.io/EditFrontMatter/LICENSE>`_

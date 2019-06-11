@@ -1,6 +1,6 @@
 ---
 title: "EditFrontMatter Class Example 3"
-description: "Edit 2 fields in this front matter"
+description: "Edit some fields in this front matter"
 catagories: [programming, python, markdown]
 
 deleteme: this will be deleted

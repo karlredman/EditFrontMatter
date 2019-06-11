@@ -62,7 +62,7 @@
 
 :Dependencies:
 
-    .. literalinclude:: ../../../../requirements.txt
+    .. literalinclude:: ../../../../examples/requirements.txt
         :language: text
 
 :License: :download:`MIT <../../../../LICENSE>`
