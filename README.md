@@ -1,5 +1,4 @@
 [![Build Status](https://drone-github.parasynthetic.dev/api/badges/karlredman/EditFrontMatter/status.svg)](https://drone-github.parasynthetic.dev/karlredman/EditFrontMatter)
-[![PyPI version](https://badge.fury.io/py/editfrontmatter.svg)](https://badge.fury.io/py/editfrontmatter)
 [![Issues](https://img.shields.io/github/issues/karlredman/EditFrontMatter.svg)](https://github.com/karlredman/EditFrontMatter/issues)
 [![License](https://img.shields.io/github/license/karlredman/EditFrontMatter.svg)](https://github.com/karlredman/EditFrontMatter/blob/master/LICENSE)
 
