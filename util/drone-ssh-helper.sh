@@ -23,4 +23,4 @@ git remote remove origin
 git remote add origin git@github.com:karlredman/EditFrontMatter.git
 git remote -v
 # push to repo
-git push origin master
+git push git@github.com:karlredman/EditFrontMatter.git master
