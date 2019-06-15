@@ -2,6 +2,9 @@ kind: pipeline
 name: default
 
 steps:
+- name: pre-install
+  image: frolvlad/alpine-gcc
+
 - name: install
   image: plugins/pypi
   commands:
