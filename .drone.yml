@@ -35,6 +35,8 @@ steps:
     SSH_HOST:
       from_secret: ssh_host
   commands:
+    - git config --global user.email $${USER_EMAIL}
+    - git config --global user.name $${USER_NAME}
     - git add -A
     - git commit -am "autobuilt docs"
     - ./util/drone-ssh-helper.sh

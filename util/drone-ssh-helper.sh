@@ -18,5 +18,5 @@ touch /root/.ssh/known_hosts
 chmod 600 /root/.ssh/known_hosts
 ssh-keyscan -H $SSH_HOST > /etc/ssh/ssh_known_hosts 2> /dev/null
 
-# get submodules
+# push to repo
 git push
