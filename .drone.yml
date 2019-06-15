@@ -1,6 +1,7 @@
 kind: pipeline
 name: default
 
+steps:
 - name: install
   image: plugins/pypi
   commands:
