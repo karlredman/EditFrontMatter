@@ -16,16 +16,16 @@ steps:
     - make -C docsource doctest
     - make -C docsource github
 
-- name: test
-  image: plugins/pypi
-  commands:
-    - make -C docsource clean
-    - make -C docsource doctest
+# - name: test
+#   image: plugins/pypi
+#   commands:
+#     - make -C docsource clean
+#     - make -C docsource doctest
 
-- name: build
-  image: plugins/pypi
-  commands:
-    - make -C docsource github
+# - name: build
+#   image: plugins/pypi
+#   commands:
+#     - make -C docsource github
 
 - name: deploy
   image: docker:git
