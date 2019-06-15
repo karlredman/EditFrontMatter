@@ -18,8 +18,9 @@ touch /root/.ssh/known_hosts
 chmod 600 /root/.ssh/known_hosts
 ssh-keyscan -H $SSH_HOST > /etc/ssh/ssh_known_hosts 2> /dev/null
 
-# push to repo
+# reset repo origin
 git remote remove origin
 git remote add origin git@github.com:karlredman/EditFrontMatter.git
 git remote -v
+# push to repo
 git push origin master
