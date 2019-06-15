@@ -24,7 +24,7 @@ ssh-keyscan -H $SSH_HOST > /etc/ssh/ssh_known_hosts 2> /dev/null
 
 # reset repo origin
 git remote remove origin
-git remote add origin git@${SSH_HOST}:${LOGIN_NAME}/${CI_REPO}.git
+git remote add origin git@${SSH_HOST}:${SSH_NAME}/${CI_REPO}.git
 git remote -v
 # push to repo
-git push git@$SSH_HOST:${LOGIN_NAME}/${CI_REPO}.git ${BRANCH}
+git push git@$SSH_HOST:${SSH_NAME}/${CI_REPO}.git ${BRANCH}
