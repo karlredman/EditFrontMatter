@@ -1,16 +1,9 @@
 kind: pipeline
 name: default
 
-steps:
-- name: pre-install
-  image: frolvlad/alpine-gcc
-
 - name: install
-  image: plugins/pypi
+  image: python:3.5.7-alpine3.9
   commands:
-    - apk add build-base
-    - apk add python-dev
-    # - pip3 install editfrontmatter
     - pip3 install -r ./examples/requirements.txt
     - pip3 install -r ./docsource/requirements.txt
     - make -C docsource clean
