@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 - name: install
-  image: 3.5.7-alpine3.9
+  image: plugins/pypi
   commands:
     - pip3 install -r ./examples/requirements.txt
     - pip3 install -r ./docsource/requirements.txt
