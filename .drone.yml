@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: install
+- name: test
   image: plugins/pypi
   environment:
     TEST_DATA_DIR: ../examples/data/
