@@ -1,4 +1,5 @@
 [![Build Status](https://drone-github.parasynthetic.dev/api/badges/karlredman/EditFrontMatter/status.svg)](https://drone-github.parasynthetic.dev/karlredman/EditFrontMatter)
+[![PyPi Version](https://img.shields.io/pypi/v/EditFrontMatter.svg?color=blue)](https://pypi.org/project/editfrontmatter/)
 [![Issues](https://img.shields.io/github/issues/karlredman/EditFrontMatter.svg)](https://github.com/karlredman/EditFrontMatter/issues)
 [![License](https://img.shields.io/github/license/karlredman/EditFrontMatter.svg)](https://github.com/karlredman/EditFrontMatter/blob/master/LICENSE)
 
