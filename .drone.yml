@@ -41,7 +41,7 @@ steps:
   commands:
     - git config --global user.email "$${USER_EMAIL}"
     - git config --global user.name "$${USER_NAME}"
+    - touch testfile
     - git add -A
     - git commit -am "autobuilt docs"
-    - touch testfile
     - ./util/drone-ssh-helper.sh
