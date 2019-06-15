@@ -2,30 +2,19 @@ kind: pipeline
 name: default
 
 steps:
-# - name: install
-#   image: plugins/pypi
-#   environment:
-#     TEST_DATA_DIR: ../examples/data/
-#   commands:
-#     - apk add build-base
-#     - apk add python3-dev
-#     # - pip3 install editfrontmatter
-#     - pip3 install -r ./examples/requirements.txt
-#     - pip3 install -r ./docsource/requirements.txt
-#     - make -C docsource clean
-#     - make -C docsource doctest
-#     - make -C docsource github
-
-# - name: test
-#   image: plugins/pypi
-#   commands:
-#     - make -C docsource clean
-#     - make -C docsource doctest
-
-# - name: build
-#   image: plugins/pypi
-#   commands:
-#     - make -C docsource github
+- name: install
+  image: plugins/pypi
+  environment:
+    TEST_DATA_DIR: ../examples/data/
+  commands:
+    - apk add build-base
+    - apk add python3-dev
+    # - pip3 install editfrontmatter
+    - pip3 install -r ./examples/requirements.txt
+    - pip3 install -r ./docsource/requirements.txt
+    - make -C docsource clean
+    - make -C docsource doctest
+    - make -C docsource github
 
 - name: deploy
   image: docker:git
@@ -44,7 +33,6 @@ steps:
   commands:
     - git config --global user.email "$${USER_EMAIL}"
     - git config --global user.name "$${USER_NAME}"
-    - touch testfile
     - git add -A
     - git commit -am "autobuilt docs"
     - ./util/drone-ssh-helper.sh
