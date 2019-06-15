@@ -9,6 +9,7 @@ steps:
   image: plugins/pypi
   commands:
     - apk add build-base
+    - apk add python-dev
     # - pip3 install editfrontmatter
     - pip3 install -r ./examples/requirements.txt
     - pip3 install -r ./docsource/requirements.txt
