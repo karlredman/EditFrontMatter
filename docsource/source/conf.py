@@ -111,9 +111,6 @@ def sphinx_setup():
     """
 
 
-
-
-
 def runtime_setup():
     """Standard boilerplate variables"""
 
@@ -173,7 +170,6 @@ def runtime_setup():
 
     globals()['ribbon_title'] = 'Fork me on GitHub'
     """Title used displayed on the ribbon"""
-
 
 
 def extensions_setup():
@@ -266,7 +262,6 @@ def html_config():
     a list of builtin themes.
     """
 
-
     globals()['html_static_path'] = ['_static']
     """
     Add any paths that contain custom static files (such as style sheets) here,
@@ -355,7 +350,6 @@ def extensions_config():
     globals()['napoleon_use_param'] = True
     globals()['napoleon_use_rtype'] = True
 
-
     # github
     globals()['html_context'].update({
         "display_github": True,  # Integrate GitHub
@@ -375,7 +369,6 @@ def extensions_config():
     }
 
     globals()['autodoc_default_flags'] = ['members']
-
 
     # intersphinx
     globals()['intersphinx_mapping'] = {'jinja2': ('http://jinja.pocoo.org/docs/', None),
@@ -414,7 +407,6 @@ def rst_epilog_config():
     )
 
 
-
 def setup(app):
     """setup custom directives for execution of the app, e.g.
     `app.add_stylesheet()`
@@ -436,4 +428,3 @@ html_config()
 html_theme_options_config()
 extensions_config()
 rst_epilog_config()
-

@@ -190,7 +190,6 @@ class Derived_EditFrontMatter (EditFrontMatter):
                       .format(file_path=self.filepath), file=sys.stderr)
             return ""
 
-
     def canPublish_func(self, val) -> bool:
         """simple callback for a jinja2 filter variable."""
         return True
@@ -209,7 +208,6 @@ def main():
         * 0 on success
         * 1 on error
     """
-
 
     # generic path - overridden by env var `TEMPLATE_DIR`
     TEST_DATA_DIR = os.path.abspath("../data/")
@@ -230,7 +228,7 @@ def main():
     files_to_process_list = []
 
     # only files ending in `.md` extension
-    filename_pattern = re.compile(".*\.md$")
+    filename_pattern = re.compile(".*\.md$") # noqa
 
     # make sure includes are not excludes -would mess up the os.walk() otherwise
     for top in include_dirs:

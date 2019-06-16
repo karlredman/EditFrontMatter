@@ -16,7 +16,7 @@
         .. literalinclude:: ../../../../examples/data/template1.j2
             :language: jinja
 
-    #. Reads a mardown file that contains yaml front matter via \ :func:`editfrontmatter.EditFrontMatter.readFile`
+    #. Reads a mardown file that contains yaml front matter via :func:`editfrontmatter.EditFrontMatter.readFile`
 
         .. literalinclude:: ../../../../examples/data/example1.md
 
@@ -137,4 +137,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

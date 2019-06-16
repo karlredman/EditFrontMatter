@@ -1,1 +1,1 @@
-from .EditFrontMatter import EditFrontMatter,EditFrontMatter_Exception
+from .EditFrontMatter import EditFrontMatter,EditFrontMatter_Exception # noqa
