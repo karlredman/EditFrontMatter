@@ -16,3 +16,4 @@ steps:
     - make -C docsource clean
     - make -C docsource doctest
     - make -C docsource github
+
