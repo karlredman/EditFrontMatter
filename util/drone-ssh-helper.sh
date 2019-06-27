@@ -4,7 +4,7 @@
 # reference: [Secret in Drone 1.0.0-rc.1 · Issue #130 · appleboy/drone-ssh](https://github.com/appleboy/drone-ssh/issues/130)
 
 # the trick to making this work is to add the ssh_key from the drone cli:
-DRONE_SERVER=$DRONE_SERVER DRONE_TOKEN=$DRONE_TOKEN sudo -E bash -c 'drone secret add --repository ${SSH_USER}/${DRONE_REPO} --name ssh_key --data @.ssh/id_rsa'
+#DRONE_SERVER=$DRONE_SERVER DRONE_TOKEN=$DRONE_TOKEN sudo -E bash -c 'drone secret add --repository ${SSH_USER}/${DRONE_REPO} --name ssh_key --data @.ssh/id_rsa'
 
 
 # Configures ssh key based on information from secrets

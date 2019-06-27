@@ -30,6 +30,7 @@ editing front matter in markdown files. Front matter is managed via<br>
 ## Documentation:
 
 * [Project Documentation with examples Page](https://karlredman.github.io/EditFrontMatter/)
+* Dev.to Article: [Be a Python Jinja Master: Automated Front Matter Editing](https://dev.to/karlredman/be-a-python-jinja-master-automated-front-matter-editing-1b8a)
 
 ## Installation:
 
