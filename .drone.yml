@@ -2,33 +2,17 @@ kind: pipeline
 name: default
 
 steps:
-# - name: testing
-#   image: plugins/pypi
-#   environment:
-#     TEST_DATA_DIR: ../examples/data/
-#   commands:
-#     - apk add build-base
-#     - apk add python3-dev
-#     - pip3 install -r ./examples/requirements.txt
-#     - pip3 install -r ./docsource/requirements.txt
-#     - pip3 install flake8
-#     - flake8 --statistics --count --ignore=E501
-#     - make -C docsource clean
-#     - make -C docsource doctest
-#     - make -C docsource github
-###########################################
 
-# - name: submodules
-#   image: docker:git
-#   environment:
-#     SSH_KEY:
-#       from_secret: ssh_key
-#     SSH_HOST:
-#       from_secret: ssh_host
-#   commands:
-#     # setup ssh for non https git pull
-#     - ./building/drone-ssh-helper.sh
-
+- name: submodules
+  image: docker:git
+  environment:
+    SSH_KEY:
+      from_secret: ssh_key
+    SSH_HOST:
+      from_secret: ssh_host
+  commands:
+    # setup ssh for non https git pull
+    - ./building/drone-ssh-helper.sh submodule
 
 - name: test
   image: docker.parasynthetic.dev/karlredman/sphinx-base:latest
