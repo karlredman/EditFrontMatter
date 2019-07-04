@@ -46,7 +46,7 @@ steps:
   commands:
     - git config --global user.email "$${USER_EMAIL}"
     - git config --global user.name "$${USER_NAME}"
-    - ./drone-ssh-helper.sh
+    - ./building/drone-ssh-helper.sh
 
 image_pull_secrets:
 - dockerconfigjson
