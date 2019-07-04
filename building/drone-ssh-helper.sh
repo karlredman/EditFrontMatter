@@ -25,6 +25,8 @@ chmod 600 /root/.ssh/known_hosts
 ssh-keyscan -H $SSH_HOST > /etc/ssh/ssh_known_hosts 2> /dev/null
 
 if [ "$1" = "submodule" ]; then
+    git config --global user.email "${USER_EMAIL}"
+    git config --global user.name "${USER_NAME}"
     # get submodules checkout
     git submodule update --init --recursive
     cd site
@@ -35,7 +37,6 @@ if [ "$1" = "submodule" ]; then
     # clean files for build
     rm -rf site/*
 elif [ "$1" = "commit" ]; then
-    # git commit gh-pages
     git config --global user.email "${USER_EMAIL}"
     git config --global user.name "${USER_NAME}"
     # get commit specs from master
