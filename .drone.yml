@@ -10,6 +10,10 @@ steps:
       from_secret: ssh_key
     SSH_HOST:
       from_secret: ssh_host
+    USER_EMAIL:
+      from_secret: user_email
+    USER_NAME:
+      from_secret: user_name
   commands:
     - ./building/drone-ssh-helper.sh submodule
 
