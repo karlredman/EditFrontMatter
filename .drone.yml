@@ -22,7 +22,7 @@ steps:
     - ./building/test.sh 3.6.8
     - ./building/test.sh 3.7.2
 
-- name: docs_build
+- name: build_docs
   image: docker.parasynthetic.dev/karlredman/sphinx-base:latest
   pull: if-not-exists
   commands:
