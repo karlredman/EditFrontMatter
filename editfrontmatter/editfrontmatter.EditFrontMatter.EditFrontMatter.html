@@ -1,0 +1,769 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Class: EditFrontMatter &mdash; EditFrontMatter 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://karlredman.github.io/EditFrontMattereditfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_customization.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="__init__" href="editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html" />
+    <link rel="prev" title="Edit Front Matter Module" href="editfrontmatter.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EditFrontMatter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+	<center><font color="gray">Current Release: 0.0.1</font></center>
+	<hr style="height:1px; border:none; color:#000; background-color:#000;">
+
+	<a href="https://github.com/karlredman/EditFrontMatter"><font color="#76D7C4">Github Project Page</font></a>
+	<a href="https://pypi.org/project/EditFrontMatter"><font color="#76D7C4">PyPi Project Page</font></a>
+	
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Full Features List</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../modules.html">EditFrontMatter package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="editfrontmatter.html">Edit Front Matter Module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Class: EditFrontMatter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.html">add_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.html">del_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html">dumpFileData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html">dumpFrontMatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data.html">has_source_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml.html">has_source_yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html">readFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.run.html">run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.html">set_yaml_delim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html">writeFile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.html">Class: EditFrontMatter_Exception</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.__init__.html">__init__</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../programs.html">Example Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example1/index.html">EditFrontMatter: Example 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example1/readme.html">EditFrontMatter: Example 1 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example1/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example1/example1.html"><em>Basic Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example2/index.html">EditFrontMatter: Example 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example2/readme.html">EditFrontMatter: Example 2 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example2/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example2/example2.html"><em>Advanced, Multi-Pass, Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example3/index.html">EditFrontMatter: Example 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example3/readme.html">EditFrontMatter: Example 3 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#program-flow">Program flow:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#constraints">Constraints:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#running-the-program">Running the program:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#example-input-output">Example Input / Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example3/example3.html"><em>Threaded, Directory Walking Example</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#are-these-answers-actually-frequently-asked">Are these answers actually frequently asked?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#why-is-this-project-so-heavily-distractingly-etc-documented">Why is this project so heavily / distractingly / etc. documented?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#why-did-you-write-this-module">Why did you write this module?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#where-is-the-test-suite">Where is the test suite!?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contrib.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contrib.html#editfrontmatter-contributing-guidelines">EditFrontMatter Contributing Guidelines:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html"><span class="raw-html"><font color="gray">Changelog</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_license.html"><span class="raw-html"><font color="gray">Code License</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_theme/about_theme.html"><span class="raw-html"><font color="#7D6608">About Theme</font></span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about_theme/dev_notes.html">RTD Theme Developer Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#layout">Layout:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#sphinx-notes">Sphinx Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#references">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#building">Building:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#live-update-dev-server">Live update dev server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#fixes">Fixes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#sphinx-rtd-theme-notes">Sphinx RTD Theme Notes:</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../about_theme/dev_notes.html#id11">References:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../about_theme/dev_notes.html#github-fork-on-github-banner">GitHub ‘Fork on GitHub’ Banner:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../about_theme/dev_notes.html#site-index-on-sidebar">Site index on sidebar</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../about_theme/dev_notes.html#remove-the-word-module-from-the-end-of-sidebar-code-elements">Remove the word “module” from the end of sidebar code elements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#theme-style-guide">Theme Style guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#references-for-later-documentation">References (for later documentation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#docstrings-python">Docstrings (python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#things-to-document">Things to Document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#rules">Rules:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#generating-class-methods-for-use-the-sidebar-toc-and-respective-individual-files">Generating class methods for use the sidebar toc and respective individual files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#before-adding-autosummary-functionality">Before adding autosummary functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#generate-method-files">Generate method files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#maintenance">maintenance:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#include-mardown-document-in-rest">Include mardown document in reST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#boilerplate-features">Boilerplate features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#configurables">configurables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#replacement-text-restrictions-in-the-docstring-for-config-py">replacement text restrictions in the docstring for config.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#pre-publishing-checklist">Pre publishing checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#id13">References:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/dev_notes.html#pypy-packaging-steps">pypy packaging steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#pip-install-module-locally-for-development">pip install module locally for development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#prepare-the-package-files">Prepare the package files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#install-distribution-dependiencies">Install distribution dependiencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#build-distribution-artifacts">build distribution artifacts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/dev_notes.html#upload-to-pypi">upload to pypi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../about_theme/conf.html">Sphinx config.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about_theme/theme_readme.html">Sphinx RTD boilerplate Readme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about_theme/theme_readme.html#running-building-and-testing">Running, Building and Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/theme_readme.html#running-example-apps">Running example apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/theme_readme.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about_theme/theme_readme.html#testing-documentation-examples-via-doctest">Testing documentation examples via <code class="docutils literal notranslate"><span class="pre">doctest</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+	<a href="https://karlredman.github.io"><font color="#7D6608">Author's Homepage</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/genindex.html"><font color="#196F3D">Overview: Source Code Function Index</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/_modules/index.html"><font color="#196F3D">Overview: Source Code Index</font></a>
+
+
+	<!-- <hr style="height:1px; border:none; border-top: dashed 1px; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top:dashed; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top: dashed 1px; color:#000; background-color#000" /> -->
+	<!-- <hr style="border-top: dashed 1px;" /> -->
+	<!-- <a href="https://karlredman.github.io"><font color="#F7DC6F">Author's Homepage</font></a> -->
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EditFrontMatter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../modules.html">EditFrontMatter package</a> &raquo;</li>
+        
+      <li>Class: EditFrontMatter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/karlredman/EditFrontMatter/blob/master/editfrontmatter/EditFrontMatter.py" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html" class="btn btn-neutral float-right" title="__init__" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="editfrontmatter.html" class="btn btn-neutral float-left" title="Edit Front Matter Module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-editfrontmatter">
+<h1>Class: EditFrontMatter<a class="headerlink" href="#class-editfrontmatter" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter">
+<em class="property">class </em><code class="sig-name descname">EditFrontMatter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">file_path=None</em>, <em class="sig-param">jinja2_env=&lt;jinja2.environment.Environment object&gt;</em>, <em class="sig-param">template_str=''</em>, <em class="sig-param">yaml_delim='---'</em>, <em class="sig-param">keys_toDelete=[]</em>, <em class="sig-param">do_readFile=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main Class for module</p>
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">file_path=None</em>, <em class="sig-param">jinja2_env=&lt;jinja2.environment.Environment object&gt;</em>, <em class="sig-param">template_str=''</em>, <em class="sig-param">yaml_delim='---'</em>, <em class="sig-param">keys_toDelete=[]</em>, <em class="sig-param">do_readFile=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main class for the module. Programmatically Adds / Updates / Deletes yaml             front matter elements embedded in text/markdown files.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This class uses keyword only arguments. Inheriting this class would
+look something like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Derived_EditFrontMatter</span> <span class="p">(</span><span class="n">EditFrontMatter</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">EditFrontMatter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>yaml_delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – yaml file section delimiter (i.e. “—”)used to locate the source
+file’s embedded yaml section.</p></li>
+<li><p><strong>do_readFile</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – allow instantiation without implicit
+<a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> call</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>self.file_lines</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – Lines from the data source file. Must be managed after creating the
+class object if <cite>__init__(do_readFile=False)</cite></p></li>
+<li><p><strong>self.file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Path of source data file. Superfluous if <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> is never called</p></li>
+<li><p><strong>self.fmatter</strong> (<em>yaml</em>) – [default: empty <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> if yaml not found]
+Front matter as a yaml object. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a>.</p></li>
+<li><p><strong>self.yaml_delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – [default:”—”]
+Front matter delimiter. Can be used to change front matter delimter
+between reading the source file into <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> and executing
+<a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter" title="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter"><code class="xref py py-func docutils literal notranslate"><span class="pre">dumpFrontMatter()</span></code></a>/<a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">writeFile()</span></code></a>.</p></li>
+<li><p><strong>self.yamlSeperator_pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/re.html#re.compile" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a>) – Regex patten for the yaml line delimiter. only used if <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> is called</p></li>
+<li><p><strong>self.yaml_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Beginning of the yaml blob in the original source file. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p></li>
+<li><p><strong>self.yaml_end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – End of the yaml blob in the origional source file. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p></li>
+<li><p><strong>self.template_str</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Contains the jinja2 template. Can be manipulated between class
+instantiation and executing <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.run.html#editfrontmatter.EditFrontMatter.EditFrontMatter.run" title="editfrontmatter.EditFrontMatter.EditFrontMatter.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a></p></li>
+<li><p><strong>self.jinja2_env</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/api/#jinja2.Environment" title="(in Jinja2 v2.11)"><em>jinja2.Environment</em></a>) – This object can be specified during class instantiation if greater control is required</p></li>
+<li><p><strong>self.keys_toDelete</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – keys to be deleted from <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> object. Utilized at the end of the <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.run.html#editfrontmatter.EditFrontMatter.EditFrontMatter.run" title="editfrontmatter.EditFrontMatter.EditFrontMatter.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> method</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Throws:</dt><dd><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.html#editfrontmatter.EditFrontMatter.EditFrontMatter_Exception" title="editfrontmatter.EditFrontMatter.EditFrontMatter_Exception"><code class="xref py py-class docutils literal notranslate"><span class="pre">EditFrontMatter_Exception</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html#editfrontmatter.EditFrontMatter.EditFrontMatter.__init__" title="editfrontmatter.EditFrontMatter.EditFrontMatter.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*[, file_path, jinja2_env, …])</p></td>
+<td><p>Main class for the module.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter" title="editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_JinjaFilter</span></code></a>(name, func, *args, **kwargs)</p></td>
+<td><p>Add a <a class="reference external" href="http://jinja.pocoo.org/docs/2.10/templates/#filters">Jinja filter</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter" title="editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">del_JinjaFilter</span></code></a>(name, *args, **kwargs)</p></td>
+<td><p>Delete a Jinja filter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData" title="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dumpFileData</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Concatenate frontmatter with original content and return as a string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter" title="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dumpFrontMatter</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Dump <cite>fmatter</cite> as a string</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data.html#editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data" title="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_source_data</span></code></a>()</p></td>
+<td><p>Checks if the source file data is empty</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml.html#editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml" title="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">has_source_yaml</span></code></a>()</p></td>
+<td><p>Checks if the yaml is empty after a call to <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readFile</span></code></a>([file_path])</p></td>
+<td><p>Read a file into <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> list (if applicable) and</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.run.html#editfrontmatter.EditFrontMatter.EditFrontMatter.run" title="editfrontmatter.EditFrontMatter.EditFrontMatter.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([extraVars_dict])</p></td>
+<td><p>Process the front matter changes and delete previously specified yaml keys.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.html#editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim" title="editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_yaml_delim</span></code></a>(delim, *args, **kwargs)</p></td>
+<td><p>Set the yaml delimiter and compile it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeFile</span></code></a>([file_path])</p></td>
+<td><p>Write to arg <cite>file_path</cite>, attr <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_path</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim">
+<code class="sig-name descname">set_yaml_delim</code><span class="sig-paren">(</span><em class="sig-param">delim</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.set_yaml_delim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the yaml delimiter and compile it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – A string to use as a delimiter for finding and editing
+frontmatter in a file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile">
+<code class="sig-name descname">readFile</code><span class="sig-paren">(</span><em class="sig-param">file_path=None</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.readFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Read a file into <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> list (if applicable) and</dt><dd><p>seperate the front matter into <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> yaml object. This
+function resets <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – optional file path</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If <em>local</em> <cite>file_path</cite>:<cite>None</cite> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_path</span></code>:<cite>None</cite>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> should be populated before calling this
+function.</p>
+<p>In the example below, the initialization would fail if
+<cite>do_readFile:True</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proc</span> <span class="o">=</span> <span class="n">EditFrontMatter</span><span class="p">(</span><span class="n">do_readFile</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">proc</span><span class="o">.</span><span class="n">file_lines</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">RUN_PATH</span> <span class="o">+</span> <span class="s2">&quot;example.md&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+<span class="c1"># initialize proc.fmatter and record data position</span>
+<span class="n">proc</span><span class="o">.</span><span class="n">readFile</span><span class="p">()</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the file source content is empty <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_empty</span></code> is set to
+<cite>True</cite>. This affects <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData" title="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData"><code class="xref py py-func docutils literal notranslate"><span class="pre">dumpFileData()</span></code></a> and <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">writeFile()</span></code></a>
+behavior</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile">
+<code class="sig-name descname">writeFile</code><span class="sig-paren">(</span><em class="sig-param">file_path=None</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.writeFile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write to arg <cite>file_path</cite>, attr <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_path</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the original file source data was empty after a call to
+<a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a>, no attempt is maid to write to the file.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – optional file path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><cite>True</cite> if file was written</p></li>
+<li><p>’False` if file was <strong>not</strong> written</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter">
+<code class="sig-name descname">add_JinjaFilter</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">func</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.add_JinjaFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Add a <a class="reference external" href="http://jinja.pocoo.org/docs/2.10/templates/#filters">Jinja filter</a></dt><dd><p>for setting a jinja2 template variable programmatically through callback.</p>
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Jinja template variable name</p></li>
+<li><p><strong>func</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><em>object</em></a>) – callback function that will set <cite>name</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Example of implementing a filter for callback</dt>
+<dd class="field-even"><p>Programatically change the value of <cite>draft</cite> field in the source
+document <cite>example1.md</cite> using a Jinja2 filter</p>
+<dl class="field-list simple">
+<dt class="field-odd">jinja2 template</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">set</span> <span class="nv">toc</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">toc: </span><span class="cp">{{</span> <span class="nv">toc</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">draft: </span><span class="cp">{{</span> <span class="kp">false</span> <span class="o">|</span> <span class="nf">canPublish</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">hasMath: </span><span class="cp">{{</span> <span class="nv">hasMath</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">stuff: </span><span class="cp">{{</span> <span class="nv">addedVariable</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">mardown file</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
+title: &quot;EditFrontMatter Class Example 1&quot;
+description: &quot;Edit some fields in this front matter&quot;
+catagories: [programming, python, markdown]
+
+deleteme: this will be deleted
+
+tags: [front matter, administration, testing]
+
+<span class="gh">#</span> comments and spaces will be eliminated (see docs)
+
+author: &quot;Karl N. Redman&quot;
+creatordisplayname: &quot;Karl N. Redman&quot;
+creatoremail: &quot;karl.redman@example.com&quot;
+date: 2019-05-23T17:43:45-05:00
+lastmodifierdisplayname: &quot;Karl N. Redman&quot;
+lastmodifieremail: &quot;karl.redman@gmail.com&quot;
+lastmod: 2019-05-23T17:43:45-05:00
+toc: false
+type: &quot;page&quot;
+hasMath: false
+draft: false
+weight: 5
+---
+
+<span class="gh">#</span> EditFontMatter Class Example 1
+
+Edit several fields of front matter.
+
+<span class="gu">##</span> Fields affected in this example:
+
+<span class="k">*</span> toc
+  <span class="k">*</span> note: uses local template variable
+  <span class="k">*</span> pre: false
+  <span class="k">*</span> post: true
+<span class="k">*</span> draft:
+  <span class="k">*</span> note: uses jinja2 filter (callback)
+  <span class="k">*</span> pre: false
+  <span class="k">*</span> post: true
+<span class="k">*</span> hasMath
+  <span class="k">*</span> note: uses program variable
+  <span class="k">*</span> pre: true
+  <span class="k">*</span> post: false
+<span class="k">*</span> stuff:
+  <span class="k">*</span> note: uses program variable to create field
+  <span class="k">*</span> pre: did not exist
+  <span class="k">*</span> post: (list) [&#39;one&#39;, &#39;two&#39;, &#39;three&#39;]
+<span class="k">*</span> deleteme:
+  <span class="k">*</span> note: removed from final result
+  <span class="k">*</span> pre: this will be deleted
+  <span class="k">*</span> post: N/A
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Example code</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">editfrontmatter</span> <span class="k">import</span> <span class="n">EditFrontMatter</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># a jinja2 filter callback function</span>
+<span class="k">def</span> <span class="nf">canPublish_func</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="c1"># do some processing....</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="c1"># stringify the template file</span>
+<span class="n">template_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;TEST_DATA_DIR&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="s2">&quot;template1.j2&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
+
+<span class="c1"># creating object</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">EditFrontMatter</span><span class="p">(</span><span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;TEST_DATA_DIR&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;example1.md&quot;</span><span class="p">,</span>
+        <span class="n">template_str</span> <span class="o">=</span> <span class="n">template_str</span><span class="p">)</span>
+
+<span class="c1"># set `canPublish_func` function for our `draft` field callback using</span>
+<span class="c1"># `canPublish` template variable.</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">add_JinjaFilter</span><span class="p">(</span><span class="s1">&#39;canPublish&#39;</span><span class="p">,</span> <span class="n">canPublish_func</span><span class="p">)</span>
+
+<span class="c1"># process the front matter from &#39;example1.md&#39;. `draft` in the front</span>
+<span class="c1"># matter will be set to `true`</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># print the new file contents (uncomment to see dump)</span>
+<span class="c1"># print(obj.dumpFileData())</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter">
+<code class="sig-name descname">del_JinjaFilter</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.del_JinjaFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a Jinja filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – filter key</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>True if filter found and deleted</p></li>
+<li><p>False if filter not found</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter">
+<code class="sig-name descname">dumpFrontMatter</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.dumpFrontMatter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dump <cite>fmatter</cite> as a string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> content as a string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData">
+<code class="sig-name descname">dumpFileData</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.dumpFileData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate frontmatter with original content and return as a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>A string formed by the concatination of <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> and                 <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> (if file souce content is <strong>not</strong> empty* <strong>and</strong> yaml was present).</p></li>
+<li><p>An empty string if file source content is empty <em>or</em> original                 yaml was <em>not</em> present.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> are still available if needed
+beyond this method. One way of managing this data would be to
+manually prepend yaml front matter to <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> and rerun
+<a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> before calling this function again.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml">
+<code class="sig-name descname">has_source_yaml</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.has_source_yaml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the yaml is empty after a call to <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This return value does not rely on <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> since that
+attribute is subject to change once <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> is called.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><cite>True</cite> if the <em>original</em> source file data did have a yaml section</p></li>
+<li><p><cite>False</cite> if the <em>original</em> source file data did <em>not</em> have a yaml section</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data">
+<code class="sig-name descname">has_source_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.has_source_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the source file data is empty</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><cite>True</cite> if the source data content <strong>is</strong> empty</p></li>
+<li><p><cite>False</cite>  if the source data is <strong>not</strong> empty</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="editfrontmatter.EditFrontMatter.EditFrontMatter.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">extraVars_dict={}</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../_modules/editfrontmatter/EditFrontMatter.html#EditFrontMatter.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#editfrontmatter.EditFrontMatter.EditFrontMatter.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process the front matter changes and delete previously specified yaml keys.</p>
+<p>Variables to change yaml data are passed as a dictionary argument as <cite>extraVars_dict</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>extraVars_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a>) – key,value pairs to be set or added in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> object.</p>
+</dd>
+</dl>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>Call EditFrontMatter.run() with variables to change in
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proc</span> <span class="o">=</span> <span class="n">EditFrontMatter</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="n">proc</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s1">&#39;hasMath&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;addedVariable&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">]})</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+	
+    <a href="https://github.com/karlredman/EditFrontMatter" target="_blank">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="">
+		</a>
+	
+
+
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Karl N. Redman
+      <span class="lastupdated">
+        Last updated on Jul 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

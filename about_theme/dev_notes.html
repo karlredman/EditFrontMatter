@@ -1,0 +1,1077 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RTD Theme Developer Notes &mdash; EditFrontMatter 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://karlredman.github.io/EditFrontMatterabout_theme/dev_notes.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_customization.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sphinx config.py" href="conf.html" />
+    <link rel="prev" title="About Theme" href="about_theme.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> EditFrontMatter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+	<center><font color="gray">Current Release: 0.0.1</font></center>
+	<hr style="height:1px; border:none; color:#000; background-color:#000;">
+
+	<a href="https://github.com/karlredman/EditFrontMatter"><font color="#76D7C4">Github Project Page</font></a>
+	<a href="https://pypi.org/project/EditFrontMatter"><font color="#76D7C4">PyPi Project Page</font></a>
+	
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Full Features List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">EditFrontMatter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../editfrontmatter/editfrontmatter.html">Edit Front Matter Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.html">Class: EditFrontMatter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.html">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.html">add_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.html">del_JinjaFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.html">dumpFileData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html">dumpFrontMatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_data.html">has_source_data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.has_source_yaml.html">has_source_yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html">readFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.run.html">run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.html">set_yaml_delim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html">writeFile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.html">Class: EditFrontMatter_Exception</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../editfrontmatter/editfrontmatter.EditFrontMatter.EditFrontMatter_Exception.__init__.html">__init__</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../programs.html">Example Programs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example1/index.html">EditFrontMatter: Example 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example1/readme.html">EditFrontMatter: Example 1 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example1/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example1/example1.html"><em>Basic Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example2/index.html">EditFrontMatter: Example 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example2/readme.html">EditFrontMatter: Example 2 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example2/readme.html#running-the-program">Running the program:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example2/example2.html"><em>Advanced, Multi-Pass, Front Matter Editing Example</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example3/index.html">EditFrontMatter: Example 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example3/readme.html">EditFrontMatter: Example 3 Readme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#program-flow">Program flow:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#constraints">Constraints:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#running-the-program">Running the program:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example3/readme.html#example-input-output">Example Input / Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example3/example3.html"><em>Threaded, Directory Walking Example</em></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#are-these-answers-actually-frequently-asked">Are these answers actually frequently asked?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#why-is-this-project-so-heavily-distractingly-etc-documented">Why is this project so heavily / distractingly / etc. documented?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#why-did-you-write-this-module">Why did you write this module?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html#where-is-the-test-suite">Where is the test suite!?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contrib.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contrib.html#editfrontmatter-contributing-guidelines">EditFrontMatter Contributing Guidelines:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html"><span class="raw-html"><font color="gray">Changelog</font></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_license.html"><span class="raw-html"><font color="gray">Code License</font></span></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="about_theme.html"><span class="raw-html"><font color="#7D6608">About Theme</font></span></a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RTD Theme Developer Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#layout">Layout:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphinx-notes">Sphinx Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#references">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building">Building:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#live-update-dev-server">Live update dev server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fixes">Fixes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sphinx-rtd-theme-notes">Sphinx RTD Theme Notes:</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id11">References:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#github-fork-on-github-banner">GitHub ‘Fork on GitHub’ Banner:</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#site-index-on-sidebar">Site index on sidebar</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#remove-the-word-module-from-the-end-of-sidebar-code-elements">Remove the word “module” from the end of sidebar code elements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#theme-style-guide">Theme Style guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#references-for-later-documentation">References (for later documentation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#docstrings-python">Docstrings (python)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#things-to-document">Things to Document</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rules">Rules:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#generating-class-methods-for-use-the-sidebar-toc-and-respective-individual-files">Generating class methods for use the sidebar toc and respective individual files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#before-adding-autosummary-functionality">Before adding autosummary functionality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-method-files">Generate method files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#maintenance">maintenance:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#include-mardown-document-in-rest">Include mardown document in reST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boilerplate-features">Boilerplate features</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#configurables">configurables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#replacement-text-restrictions-in-the-docstring-for-config-py">replacement text restrictions in the docstring for config.py</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-publishing-checklist">Pre publishing checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#packaging-pypi-notes">Packaging / PyPi Notes:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">References:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pypy-packaging-steps">pypy packaging steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pip-install-module-locally-for-development">pip install module locally for development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prepare-the-package-files">Prepare the package files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-distribution-dependiencies">Install distribution dependiencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-distribution-artifacts">build distribution artifacts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-to-pypi">upload to pypi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="conf.html">Sphinx config.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theme_readme.html">Sphinx RTD boilerplate Readme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theme_readme.html#running-building-and-testing">Running, Building and Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="theme_readme.html#running-example-apps">Running example apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="theme_readme.html#building-documentation">Building documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="theme_readme.html#testing-documentation-examples-via-doctest">Testing documentation examples via <code class="docutils literal notranslate"><span class="pre">doctest</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+	<a href="https://karlredman.github.io"><font color="#7D6608">Author's Homepage</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/genindex.html"><font color="#196F3D">Overview: Source Code Function Index</font></a>
+	<a href="https://karlredman.github.io/EditFrontMatter/_modules/index.html"><font color="#196F3D">Overview: Source Code Index</font></a>
+
+
+	<!-- <hr style="height:1px; border:none; border-top: dashed 1px; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top:dashed; color:#000; background-color:#000;"> -->
+	<!-- <hr style="border-top: dashed 1px; color:#000; background-color#000" /> -->
+	<!-- <hr style="border-top: dashed 1px;" /> -->
+	<!-- <a href="https://karlredman.github.io"><font color="#F7DC6F">Author's Homepage</font></a> -->
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">EditFrontMatter</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="about_theme.html"><span class="raw-html"><font color="#7D6608">About Theme</font></span></a> &raquo;</li>
+        
+      <li>RTD Theme Developer Notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/karlredman/EditFrontMatter/blob/master/DevNotes.md" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="conf.html" class="btn btn-neutral float-right" title="Sphinx config.py" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="about_theme.html" class="btn btn-neutral float-left" title="About Theme" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rtd-theme-developer-notes">
+<h1>RTD Theme Developer Notes<a class="headerlink" href="#rtd-theme-developer-notes" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>These notes are intended to be part of future documentation for a Sphinx RTD Theme Boilerplate project.</p></li>
+<li><p>These notes provide snippiets of information in regard to configuring the current theme.</p></li>
+</ul>
+<div class="section" id="layout">
+<h2>Layout:<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sphinx-notes">
+<h2>Sphinx Notes:<a class="headerlink" href="#sphinx-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="references">
+<h3>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/master/doc/usage/restructuredtext/directives.rst">sphinx/directives.rst at master · sphinx-doc/sphinx</a></p></li>
+</ul>
+</div>
+<div class="section" id="building">
+<h3>Building:<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Setup development environment:</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;</span>
+<span class="n">virtualenv</span> <span class="n">venv</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Build docs:</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">prep</span> <span class="n">build</span> <span class="n">environment</span>
+<span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;/</span><span class="n">docsource</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+
+<span class="o">#</span> <span class="k">for</span> <span class="k">each</span> <span class="n">document</span> <span class="n">module</span> <span class="p">(</span><span class="k">if</span> <span class="n">sources</span> <span class="n">added</span><span class="p">)</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">editfrontmatter</span> <span class="p">..</span><span class="o">/</span><span class="n">editfrontmatter</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example1</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example1</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example2</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example2</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example3</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example3</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example4</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example4</span>
+
+<span class="o">#</span> <span class="n">run</span> <span class="n">doctest</span> <span class="p">(</span><span class="k">with</span> <span class="n">custom</span> <span class="n">path</span><span class="p">)</span>
+<span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">doctest</span>
+
+<span class="o">#</span> <span class="n">make</span> <span class="n">the</span> <span class="n">docs</span> <span class="p">(</span><span class="k">for</span> <span class="n">github</span> <span class="n">pages</span><span class="p">)</span>
+<span class="o">##</span> <span class="n">the</span> <span class="n">path</span> <span class="k">is</span> <span class="n">usually</span> <span class="k">not</span> <span class="n">necessary</span>
+<span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">github</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Access/Review:</p>
+<ul>
+<li><p>open browser <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;/docs/build/</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="live-update-dev-server">
+<h3>Live update dev server<a class="headerlink" href="#live-update-dev-server" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/GaretJax/sphinx-autobuild">GaretJax/sphinx-autobuild: Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.</a></p>
+<ul>
+<li><p>only works for sphinx sources. does not catch code changes</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;project dir&gt;/docsource
+pip install -r requirements.txt
+<span class="c1">#</span>
+<span class="nb">cd</span> &lt;project dir&gt;
+sphinx-autobuild docsource/source docsource/build/html
+</pre></div>
+</div>
+</div>
+<div class="section" id="fixes">
+<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Change the width of the displayed page</p>
+<ul>
+<li><p>reference: <a class="reference external" href="https://stackoverflow.com/a/43186995/1725771">html - Modifying content width of the Sphinx theme ‘Read the Docs’ - Stack Overflow</a></p></li>
+</ul>
+</li>
+<li><p>quoted from the reference:</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>Just in case someone is still searching for a simple answer... combining the ideas from https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/ and the above suggestions i found that the most easy way of getting a custom window-width is the following:
+
+in conf.py add a function that adds your custom stylesheet (just add the following lines):
+
+########## code block
+def setup(app):
+    app.add_stylesheet(&#39;my_theme.css&#39;)
+##########
+
+and then create a file called my_theme.css in the _static folder that simply contains the following lines:
+
+########## code block
+.wy-nav-content {
+max-width: 1200px !important;
+}
+##########
+</pre></div>
+</div>
+<ul>
+<li><p>Setup <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> for building github pages (for <a href="#id1"><span class="problematic" id="id2">`</span></a>master:/docs’)</p>
+<ul class="simple">
+<li><p>add a <code class="docutils literal notranslate"><span class="pre">github</span></code> target to <code class="docutils literal notranslate"><span class="pre">Makefile</span></code></p></li>
+</ul>
+<div class="highlight-makefile notranslate"><div class="highlight"><pre><span></span><span class="nf">github</span><span class="o">:</span>
+    @make html
+    @rm -rf ../docs/*
+    @cp -a build/html/* ../docs/
+</pre></div>
+</div>
+</li>
+<li><p>Build message: “WARNING: document isn’t included in any toctree for included file: <code class="docutils literal notranslate"><span class="pre">modules.rst</span></code>”</p>
+<ul class="simple">
+<li><p>add <code class="docutils literal notranslate"><span class="pre">modules</span></code> to the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> (or appropriat) file</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+    <span class="nc">:caption:</span> <span class="nf">Contents:</span>
+
+    modules
+</pre></div>
+</div>
+</li>
+<li><p>Hide contents from page while adding it to <code class="docutils literal notranslate"><span class="pre">toctree</span></code> sidebar</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+    <span class="nc">:caption:</span> <span class="nf">Contents:</span>
+    <span class="nc">:hidden:</span>
+
+    modules
+</pre></div>
+</div>
+</li>
+<li><p>color words / characters in a page</p>
+<ul class="simple">
+<li><p>reference: <a class="reference external" href="https://stackoverflow.com/a/56303496/1725771">html - sphinx, restructuredtext: set color for a single word - Stack Overflow</a>
+<a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a>rst
+.. role:: raw-html(raw)
+:format: html</p></li>
+</ul>
+<p><span class="raw-html"><font color="blue">Blue word,</font></span> And a word without color
+<a href="#id7"><span class="problematic" id="id8">``</span></a><a href="#id9"><span class="problematic" id="id10">`</span></a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="sphinx-rtd-theme-notes">
+<h3>Sphinx RTD Theme Notes:<a class="headerlink" href="#sphinx-rtd-theme-notes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id11">
+<h4>References:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/rtfd/sphinx_rtd_theme">rtfd/sphinx_rtd_theme: Sphinx theme for readthedocs.org</a></p></li>
+</ul>
+</div>
+<div class="section" id="github-fork-on-github-banner">
+<h4>GitHub ‘Fork on GitHub’ Banner:<a class="headerlink" href="#github-fork-on-github-banner" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Alternate images: <a class="reference external" href="https://github.com/tholman/github-corners">tholman/github-corners: A fresher “Fork me on GitHub” callout.</a></p></li>
+<li><p>Add the following to <code class="docutils literal notranslate"><span class="pre">docsource/source/_templates/layout.html</span></code></p></li>
+</ul>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;!layout.html&#39;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">document</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{{</span><span class="nb">super</span><span class="o">()</span><span class="cp">}}</span><span class="x"></span>
+<span class="x">      &lt;a href=&quot;https://github.com/karlredman/EditFrontMatter&quot;&gt;</span>
+<span class="x">          &lt;img style=&quot;position: absolute; top: 0; right: 0; border: 0;&quot; src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png&quot; alt=&quot;Fork me on GitHub&quot;&gt;</span>
+<span class="x">      &lt;/a&gt;</span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="site-index-on-sidebar">
+<h4>Site index on sidebar<a class="headerlink" href="#site-index-on-sidebar" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>reference: <a class="reference external" href="https://stackoverflow.com/a/37843854/1725771">How to add Sphinx-generated index to the sidebar when using Read the Docs theme? - Stack Overflow</a></p></li>
+<li><p>Note: this will cause issues if <code class="docutils literal notranslate"><span class="pre">genindex.html</span></code> is not handled properly</p></li>
+<li><p>Add the following to <code class="docutils literal notranslate"><span class="pre">docsource/source/_templates/layout.html</span></code></p></li>
+</ul>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!layout.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">menu</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;a href=&quot;https://karlredman.github.io/EditFrontMatter/genindex.html&quot;&gt;Index&lt;/a&gt;</span>
+<span class="x">    </span><span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">  </span><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-the-word-module-from-the-end-of-sidebar-code-elements">
+<h4>Remove the word “module” from the end of sidebar code elements<a class="headerlink" href="#remove-the-word-module-from-the-end-of-sidebar-code-elements" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Add the following to <code class="docutils literal notranslate"><span class="pre">docsource/source/_templates/layout.html</span></code></p></li>
+</ul>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;!layout.html&#39;</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">extrahead</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    &lt;script type=&quot;text/javascript&quot;&gt;</span>
+<span class="x">    window.onload = function() {</span>
+<span class="x">        document.body.innerHTML = document.body.innerHTML.replace(/ module/g, &#39;&#39;);</span>
+<span class="x">    }</span>
+<span class="x">    &lt;/script&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="theme-style-guide">
+<h2>Theme Style guide<a class="headerlink" href="#theme-style-guide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="references-for-later-documentation">
+<h3>References (for later documentation)<a class="headerlink" href="#references-for-later-documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html#example-google">Example Google Style Python Docstrings — Sphinx 3.0.0+/f63abac2c documentation</a></p></li>
+<li><p><a class="reference external" href="https://pythonhosted.org/sphinxjp.themes.basicstrap/sample.html">Sample Document — sphinx theme for basicstrap style documentation</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html">sphinx.ext.napoleon – Support for NumPy and Google style docstrings — Sphinx 3.0.0+/f63abac2c documentation</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html#example-google">Example Google Style Python Docstrings — Sphinx 3.0.0+/f63abac2c documentation</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#xref-syntax">Roles — Sphinx 3.0.0+/f63abac2c documentation</a></p></li>
+</ul>
+</div>
+<div class="section" id="docstrings-python">
+<h3>Docstrings (python)<a class="headerlink" href="#docstrings-python" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>module</p>
+<ul>
+<li><p>The module must be documented at the top of the file just below the <code class="docutils literal notranslate"><span class="pre">shebang</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">moduleauthor</span></code> is documented a second time for readablility and compatibility with python standards.</p></li>
+<li><p>a <code class="docutils literal notranslate"><span class="pre">__main__</span></code> bock <strong>must</strong> be used to maintain compatibility with sphinx preprocessing.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">*PROJECT_NAME Module*</span>
+<span class="sd">===========================================</span>
+
+<span class="sd">.. module:: MODULE_NAME</span>
+
+<span class="sd">:Synopsis: SYNOPSIS</span>
+
+<span class="sd">:Platform: Unix, Windows, |python_version|</span>
+
+<span class="sd">:Dependencies:</span>
+
+<span class="sd">    .. literalinclude:: ../../../requirements.txt</span>
+<span class="sd">        :language: text</span>
+
+<span class="sd">:License: :download:</span>
+
+<span class="sd">.. :moduleauthor: `Karl N. Redman &lt;https://karlredman.github.io&gt;`_</span>
+
+<span class="sd">:Module Author: _</span>
+
+<span class="sd">:homepage: `PROJECT_NAME &lt;https://karlredman.github.io/PROJECT_NAME&gt;`</span>
+<span class="sd">:homepage: `PROJECT_NAME &lt;https://github.com/karlredman/PROJECT_NAME&gt;`</span>
+
+<span class="sd">:Current Release:</span>
+<span class="sd">    version: |release|</span>
+
+<span class="sd">.. versionadded:: 0.0.1</span>
+<span class="sd">    Initial Version</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul>
+<li><p>class</p>
+<ul class="simple">
+<li><p>A short docstring must be placed at the top of the class just under the class signature in order for <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> to pick up the text.</p>
+<ul>
+<li><p>Note, do <strong>not</strong> document instatniation or attributes at the class level. Use <code class="docutils literal notranslate"><span class="pre">__init__</span></code> for this purpros.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>class <code class="docutils literal notranslate"><span class="pre">__init__</span></code></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">__init__</span></code> to document constructor arguments, attributes, and other similar class related information.</p>
+<ul>
+<li><p>Sphinx <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> expects documentation for these things to be located wihin <code class="docutils literal notranslate"><span class="pre">__init__</span></code></p></li>
+<li><p>the sphinx <code class="docutils literal notranslate"><span class="pre">config.py</span></code> should be configured with the following to properly include the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method in documentation</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">napoleon_include_init_with_doc</span> <span class="pre">=</span> <span class="pre">True</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autodoc_default_options</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">'special-members':</span> <span class="pre">'__init__',</span> <span class="pre">}</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>method / function</p>
+<ul class="simple">
+<li><p>Docstrings should followthe layout of the template below:</p></li>
+</ul>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myfunc</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :Description:</span>
+<span class="sd">        SUMMARY</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        NAME (TYPE):</span>
+<span class="sd">            DESCRIPTION</span>
+
+<span class="sd">    [:rtype: | Returns:]</span>
+<span class="sd">        RETURN INFO</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="things-to-document">
+<h3>Things to Document<a class="headerlink" href="#things-to-document" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="rules">
+<h3>Rules:<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Order of precedence</p>
+<ul>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc method</a></p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html#example-google">google method</a>)</p>
+<ul>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html">napoleon</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html">intersphinx</a></p></li>
+</ul>
+</li>
+<li><p>instance attributes are documented as such:</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Attributes:
+    DATA_PATH (str):
+        generic path if running from the local the <span class="nv">`example1`</span>
+        directory
+
+    file_path (str):
+        path of data (markdown) file to be read
+
+    template_str (str):
+        string containing the contents of a Jinja2 template
+
+    proc (EditFrontMatter):
+        the EditFrontatter object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="generating-class-methods-for-use-the-sidebar-toc-and-respective-individual-files">
+<h2>Generating class methods for use the sidebar toc and respective individual files<a class="headerlink" href="#generating-class-methods-for-use-the-sidebar-toc-and-respective-individual-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Autosummary method (with automodule)</p></li>
+<li><p>Note that if you use links to files outside of the docsource tree then you willl needto make some decisions …. maybe eliminate <code class="docutils literal notranslate"><span class="pre">_autosummary</span></code></p></li>
+</ul>
+<p>for a sphinx module directory that is ‘wired’ to a package, where automodule is used already, it is possible to generate the method files required for adding to the toc. Note that this creates a lot of warnings and the process is rather ughly.</p>
+<ul class="simple">
+<li><p>The docsource directory (sphinx base) looks like this before generating the individal method files:</p></li>
+<li><p>This process is, by far, not optimal and probably not entirely practicle</p>
+<ul>
+<li><p>maintenance, adding new functions, etc., would be fairly cumbersome</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>.
+├── conf.py
+├── editfrontmatter
+│   └── editfrontmatter.rst
+├── index.rst
+├── modules.rst
+├── _static
+│   └── theme_customization.css
+└── _templates
+    └── layout.html
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The chain for the rst files is this:</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">index</span><span class="p">.</span><span class="n">rst</span> <span class="c1">--&gt; modules --&gt; editfrontmatter.rst</span>
+</pre></div>
+</div>
+<div class="section" id="before-adding-autosummary-functionality">
+<h3>Before adding autosummary functionality<a class="headerlink" href="#before-adding-autosummary-functionality" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>modules.rst looks like this:</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">EditFrontMatter package</span>
+<span class="gh">=======================</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+
+   editfrontmatter/editfrontmatter
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>editfrontmatter.rst is the package level rst (before autosummary changes)</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">editfrontmatter</span><span class="p">.</span><span class="n">EditFrontMatter</span>
+    <span class="p">:</span><span class="n">noindex</span><span class="p">:</span>
+
+<span class="p">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">editfrontmatter</span><span class="p">.</span><span class="n">EditFrontMatter</span><span class="p">([</span><span class="k">options</span><span class="p">])</span>
+    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">undoc</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">private</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">inherited</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="k">show</span><span class="o">-</span><span class="n">inheritance</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">special</span><span class="o">-</span><span class="n">members</span><span class="p">:</span> <span class="n">__init__</span>
+    <span class="p">:</span><span class="n">member</span><span class="o">-</span><span class="k">order</span><span class="p">:</span> <span class="n">bysource</span>
+
+<span class="p">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">editfrontmatter</span><span class="p">.</span><span class="n">EditFrontMatter_Exception</span><span class="p">([</span><span class="k">options</span><span class="p">])</span>
+    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">undoc</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">private</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">inherited</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
+    <span class="p">:</span><span class="k">show</span><span class="o">-</span><span class="n">inheritance</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">special</span><span class="o">-</span><span class="n">members</span><span class="p">:</span> <span class="n">__init__</span>
+    <span class="p">:</span><span class="n">member</span><span class="o">-</span><span class="k">order</span><span class="p">:</span> <span class="n">bysource</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-method-files">
+<h3>Generate method files<a class="headerlink" href="#generate-method-files" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>add the following to the bottome of <code class="docutils literal notranslate"><span class="pre">editfrontmatter.rst</span></code>. This will add a class definition file into the <code class="docutils literal notranslate"><span class="pre">_autosummary</span></code> subdirectory.</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autosummary</span><span class="p">::</span>
+    <span class="nc">:toctree:</span> <span class="nf">_autosummary</span>
+
+    EditFrontMatter
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>run sphinx-autogen to add the class files into a subdirectory. Creates file <code class="docutils literal notranslate"><span class="pre">source/editfrontmatter/_autosource/_autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.rst</span></code></p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sphinx-autogen -o source/editfrontmatter/_autosummary source/editfrontmatter/editfrontmatter.rst
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>edit the new file <code class="docutils literal notranslate"><span class="pre">&lt;path&gt;/_autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.rst</span></code> and add <code class="docutils literal notranslate"><span class="pre">:toctree</span></code> to the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">autosummary</span> <span class="pre">directive</span></code>. Here’s the entire file after edit:</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">editfrontmatter.EditFrontMatter.EditFrontMatter</span>
+<span class="gh">===============================================</span>
+
+<span class="p">..</span> <span class="ow">currentmodule</span><span class="p">::</span> editfrontmatter.EditFrontMatter
+
+<span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> EditFrontMatter
+
+
+<span class="p">   ..</span> <span class="ow">automethod</span><span class="p">::</span> __init__
+
+
+<span class="p">   ..</span> <span class="ow">rubric</span><span class="p">::</span> Methods
+
+<span class="p">   ..</span> <span class="ow">autosummary</span><span class="p">::</span>
+      <span class="nc">:toctree:</span>
+
+      ~EditFrontMatter.__init__
+      ~EditFrontMatter.add_JinjaFilter
+      ~EditFrontMatter.del_JinjaFilter
+      ~EditFrontMatter.dumpFileData
+      ~EditFrontMatter.dumpFrontMatter
+      ~EditFrontMatter.readFile
+      ~EditFrontMatter.run
+      ~EditFrontMatter.set_yaml_delim
+      ~EditFrontMatter.writeFile
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Build sphinx: This will causea lot of warnings. We’ll fix some of them in the next step. Also, this will cause the individal method files to be generated.</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">clean</span><span class="p">;</span> <span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">github</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">_autosummary/</span></code> now looks like this:</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>$ ls _autosummary/
+editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.rst  editfrontmatter.EditFrontMatter.EditFrontMatter.__init__.rst  editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim.rst editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter.rst  editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.rst  editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.rst editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData.rst     editfrontmatter.EditFrontMatter.EditFrontMatter.rst editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.rst  editfrontmatter.EditFrontMatter.EditFrontMatter.run.rst
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">editfrontmatter.rst</span></code> again to remove the <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive and add a <code class="docutils literal notranslate"><span class="pre">toctree</span></code> for the newly generated files. The final file looks like this:</p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> editfrontmatter.EditFrontMatter
+    <span class="nc">:noindex:</span>
+
+<span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> editfrontmatter.EditFrontMatter([options])
+    <span class="nc">:members:</span>
+    <span class="nc">:undoc-members:</span>
+    <span class="nc">:private-members:</span>
+    <span class="nc">:inherited-members:</span>
+    <span class="nc">:show-inheritance:</span>
+    <span class="nc">:special-members:</span> <span class="nf">__init__</span>
+    <span class="nc">:member-order:</span> <span class="nf">bysource</span>
+
+<span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> editfrontmatter.EditFrontMatter_Exception([options])
+    <span class="nc">:members:</span>
+    <span class="nc">:undoc-members:</span>
+    <span class="nc">:private-members:</span>
+    <span class="nc">:inherited-members:</span>
+    <span class="nc">:show-inheritance:</span>
+    <span class="nc">:special-members:</span> <span class="nf">__init__</span>
+    <span class="nc">:member-order:</span> <span class="nf">bysource</span>
+
+<span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+    <span class="nc">:hidden:</span>
+
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.EditFrontMatter
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.__init__
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.del_JinjaFilter
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFileData
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.readFile
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.run
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.set_yaml_delim
+    _autosummary/editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>finally, rebuild sphinx again</p>
+<ul>
+<li><p>optionally change the headings of each of the generated files for easier reading on the sidebar.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="maintenance">
+<h3>maintenance:<a class="headerlink" href="#maintenance" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>For each new method added to the source file you will have to:</p>
+<ul>
+<li><p>create the new file under <code class="docutils literal notranslate"><span class="pre">_autosummary</span></code></p></li>
+<li><p>add the method spec to <code class="docutils literal notranslate"><span class="pre">editfrontmatter.rst</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="include-mardown-document-in-rest">
+<h2>Include mardown document in reST<a class="headerlink" href="#include-mardown-document-in-rest" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Reference: <a class="reference external" href="https://github.com/miyakogi/m2r#sphinx-integration">miyakogi/m2r: Markdown to reStructuredText converter</a></p></li>
+</ul>
+</div>
+<div class="section" id="boilerplate-features">
+<h2>Boilerplate features<a class="headerlink" href="#boilerplate-features" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Greeting page is automatically linked to project README.md</p></li>
+<li><p>Theme documentation is built in</p>
+<ul>
+<li><p>easily removed</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="configurables">
+<h3>configurables<a class="headerlink" href="#configurables" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="replacement-text-restrictions-in-the-docstring-for-config-py">
+<h3>replacement text restrictions in the docstring for config.py<a class="headerlink" href="#replacement-text-restrictions-in-the-docstring-for-config-py" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>text replacement can’t be used within grave marks -hence all rst links</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:homepage:</span></code> must be entered without using ext replacement</p>
+<ul>
+<li><p>TODO: find different solution</p>
+<ul>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/44591448/sphinx-html-variables">Sphinx html variables - Stack Overflow</a></p></li>
+</ul>
+</li>
+<li><p>the file docstring title: is not processed for sphinx replacement</p>
+<ul>
+<li><p>TODO: needs more investigation</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="pre-publishing-checklist">
+<h2>Pre publishing checklist<a class="headerlink" href="#pre-publishing-checklist" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>check the gitignore files and adjust accordingly</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="c1">--ignored</span>
+</pre></div>
+</div>
+<ul>
+<li><p>if it’s a sandbox git repo that is already published, replace history:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gist.github.com/stephenhardy/5470814">Steps to clear out the history of a git/github repository · GitHub</a></p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">double</span> <span class="k">check</span> <span class="p">.</span><span class="n">gitignore</span>
+<span class="n">git</span> <span class="n">status</span> <span class="c1">--ignored</span>
+
+<span class="o">#</span> <span class="k">check</span> <span class="n">documentation</span> <span class="k">is</span> <span class="k">in</span> <span class="k">order</span>
+
+<span class="o">#</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">everything</span> <span class="n">builds</span> <span class="k">and</span> <span class="n">runs</span>
+
+<span class="o">#</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">tests</span> <span class="n">pass</span>
+
+<span class="o">#</span> <span class="n">Remove</span> <span class="n">the</span> <span class="n">history</span> <span class="k">from</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="p">.</span><span class="n">git</span>
+
+<span class="o">#</span> <span class="n">recreate</span> <span class="n">the</span> <span class="n">repos</span> <span class="k">from</span> <span class="n">the</span> <span class="k">current</span> <span class="n">content</span> <span class="k">only</span>
+<span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="k">add</span> <span class="o">-</span><span class="n">A</span>
+<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;Initial commit&quot;</span>
+
+<span class="o">#</span> <span class="n">push</span> <span class="k">to</span> <span class="n">the</span> <span class="n">github</span> <span class="n">remote</span> <span class="n">repos</span> <span class="n">ensuring</span> <span class="n">you</span> <span class="n">overwrite</span> <span class="n">history</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="k">add</span> <span class="n">origin</span> <span class="n">git</span><span class="o">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">YOUR</span> <span class="n">ACCOUNT</span><span class="o">&gt;/&lt;</span><span class="n">YOUR</span> <span class="n">REPOS</span><span class="o">&gt;</span><span class="p">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="c1">--force origin master</span>
+
+<span class="o">#</span> <span class="n">checkout</span> <span class="n">the</span> <span class="n">project</span> <span class="n">again</span> <span class="k">and</span> <span class="n">reverify</span> <span class="o">/</span> <span class="n">retest</span> <span class="n">everything</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="packaging-pypi-notes">
+<h2>Packaging / PyPi Notes:<a class="headerlink" href="#packaging-pypi-notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>References:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://packaging.python.org/tutorials/packaging-projects/">Packaging Python Projects — Python Packaging User Guide</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="pypy-packaging-steps">
+<h2>pypy packaging steps<a class="headerlink" href="#pypy-packaging-steps" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pip-install-module-locally-for-development">
+<h3>pip install module locally for development<a class="headerlink" href="#pip-install-module-locally-for-development" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># cd &lt;project dir&gt;</span>
+pip install -e .
+</pre></div>
+</div>
+</div>
+<div class="section" id="prepare-the-package-files">
+<h3>Prepare the package files<a class="headerlink" href="#prepare-the-package-files" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>configure setup.py</p>
+<ul>
+<li><p>References:</p>
+<ul>
+<li><p><a class="reference external" href="https://packaging.python.org/guides/distributing-packages-using-setuptools/">Packaging and distributing projects — Python Packaging User Guide</a></p></li>
+<li><p><a class="reference external" href="https://setuptools.readthedocs.io/en/latest/index.html">Welcome to Setuptools’ documentation! — setuptools 41.0.1 documentation</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/pypi-publish-python-package/#versioning-your-package">How to Publish an Open-Source Python Package to PyPI – Real Python</a></p></li>
+</ul>
+</li>
+<li><p>Basic layout
+<code class="docutils literal notranslate"><span class="pre">py</span></code></p></li>
+</ul>
+</li>
+<li><p>create <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file</p>
+<ul>
+<li><p><a class="reference external" href="https://packaging.python.org/guides/making-a-pypi-friendly-readme/#validating-restructuredtext-markup">Making a PyPI-friendly README — Python Packaging User Guide</a></p></li>
+</ul>
+</li>
+<li><p>create <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> file</p></li>
+</ul>
+</div>
+<div class="section" id="install-distribution-dependiencies">
+<h3>Install distribution dependiencies<a class="headerlink" href="#install-distribution-dependiencies" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">assuming</span> <span class="n">virtualenv</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="c1">--upgrade setuptools wheel twine</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-distribution-artifacts">
+<h3>build distribution artifacts<a class="headerlink" href="#build-distribution-artifacts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>build source dist:</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">sdist</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>build wheel</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">assumes</span> <span class="o">`</span><span class="n">pure</span> <span class="n">wheel</span><span class="o">`</span> <span class="p">(</span><span class="n">supports</span> <span class="n">py</span> <span class="n">v2</span> <span class="k">or</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">bdist_wheel</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>verify README compliance / format</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">twine</span> <span class="k">check</span> <span class="n">dist</span><span class="cm">/*</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="upload-to-pypi">
+<h3>upload to pypi<a class="headerlink" href="#upload-to-pypi" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Test system</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">twine</span> <span class="n">upload</span> <span class="c1">--repository-url https://test.pypi.org/legacy/ dist/*</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Verify project page</p></li>
+<li><p>verify pip install</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+	
+    <a href="https://github.com/karlredman/EditFrontMatter" target="_blank">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="">
+		</a>
+	
+
+
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Karl N. Redman
+      <span class="lastupdated">
+        Last updated on Jul 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
