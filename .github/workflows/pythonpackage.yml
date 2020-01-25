@@ -1,4 +1,4 @@
-name: Python package
+name: Test Python Package and Docs
 
 on: [push]
 
@@ -12,22 +12,30 @@ jobs:
         python-version: [3.5, 3.6, 3.7]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      # with:
+      #   ref: ghpages_deploy
+
+    # - name: checkout submodules
+    #   shell: bash
+    #   run: |
+    #     auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+    #     git submodule sync --recursive
+    #     git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install -e .
         pip install -r docsource/requirements.txt
-      with:
-        python-version: ${{ matrix.python-version }}
+
     - name: Lint with flake8
-      with:
-        python-version: ${{ matrix.python-version }}
       run: |
         pip install flake8
         # stop the build if there are Python syntax errors or undefined names
@@ -36,18 +44,12 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         # TEMP/TESTING run with excluded dirs and ignore long lines
         # flake8 . --exclude docsource docs --ignore=E501
-    - name: Test via Sphinx
-      with:
-        python-version: ${{ matrix.python-version }}
+
+    - name: Test Sphinx
       run: |
         make -C docsource clean; TEST_DATA_DIR="../examples/data/" make -C docsource doctest
-    # - name: Build
+
+    # - name: Test with pytest
     #   run: |
-    #     # bash -c 'source /root/.bashrc && make -C docsource github'
-    #     make -C docsource github
-    # - name: Deploy to gh pages
-    #   uses: JamesIves/github-pages-deploy-action@releases/v3
-    #   with:
-    #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-    #     BRANCH: gh-pages # The branch the action should deploy to.
-    #     FOLDER: site # The folder the action should deploy.
+    #     pip install pytest
+    #     pytest
