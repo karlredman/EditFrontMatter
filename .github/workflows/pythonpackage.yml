@@ -23,7 +23,11 @@ jobs:
         pip install -r requirements.txt
         pip install -e .
         pip install -r docsource/requirements.txt
+      with:
+        python-version: ${{ matrix.python-version }}
     - name: Lint with flake8
+      with:
+        python-version: ${{ matrix.python-version }}
       run: |
         pip install flake8
         # stop the build if there are Python syntax errors or undefined names
@@ -31,11 +35,19 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         # TEMP/TESTING run with excluded dirs and ignore long lines
-        flake8 . --exclude docsource docs --ignore=E501
+        # flake8 . --exclude docsource docs --ignore=E501
     - name: Test via Sphinx
+      with:
+        python-version: ${{ matrix.python-version }}
       run: |
         make -C docsource clean; TEST_DATA_DIR="../examples/data/" make -C docsource doctest
-    # - name: Test with pytest
+    # - name: Build
     #   run: |
-    #     pip install pytest
-    #     pytest
+    #     # bash -c 'source /root/.bashrc && make -C docsource github'
+    #     make -C docsource github
+    # - name: Deploy to gh pages
+    #   uses: JamesIves/github-pages-deploy-action@releases/v3
+    #   with:
+    #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    #     BRANCH: gh-pages # The branch the action should deploy to.
+    #     FOLDER: site # The folder the action should deploy.
