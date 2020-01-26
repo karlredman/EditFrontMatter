@@ -450,7 +450,7 @@ Edit several fields of front matter.
 
 <span class="k">def</span> <span class="nf">canPublish_func</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
     <span class="c1"># do some processing....</span>
-    <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="kc">True</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -466,7 +466,7 @@ Edit several fields of front matter.
 
     <span class="c1"># initialize `template_str` with template file content</span>
     <span class="n">template_str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">DATA_PATH</span> <span class="o">+</span> <span class="s2">&quot;template1.j2&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">template_str</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">template_str</span><span class="p">)</span>
 
     <span class="c1"># instantiate the processor</span>
     <span class="n">proc</span> <span class="o">=</span> <span class="n">EditFrontMatter</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> <span class="n">template_str</span><span class="o">=</span><span class="n">template_str</span><span class="p">)</span>
@@ -482,7 +482,7 @@ Edit several fields of front matter.
               <span class="s1">&#39;addedVariable&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">]})</span>
 
     <span class="c1"># dump file</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">proc</span><span class="o">.</span><span class="n">dumpFileData</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">proc</span><span class="o">.</span><span class="n">dumpFileData</span><span class="p">())</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -570,9 +570,9 @@ Edit several fields of front matter.
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Karl N. Redman
+        &copy; Copyright 2020, Karl N. Redman
       <span class="lastupdated">
-        Last updated on Jul 04, 2019.
+        Last updated on Jan 26, 2020.
       </span>
 
     </p>

@@ -327,7 +327,7 @@
 <p>This class uses keyword only arguments. Inheriting this class would
 look something like the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Derived_EditFrontMatter</span> <span class="p">(</span><span class="n">EditFrontMatter</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">EditFrontMatter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -335,30 +335,30 @@ look something like the following:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>yaml_delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – yaml file section delimiter (i.e. “—”)used to locate the source
+<li><p><strong>yaml_delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – yaml file section delimiter (i.e. “—”)used to locate the source
 file’s embedded yaml section.</p></li>
-<li><p><strong>do_readFile</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – allow instantiation without implicit
+<li><p><strong>do_readFile</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – allow instantiation without implicit
 <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> call</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>self.file_lines</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – Lines from the data source file. Must be managed after creating the
+<li><p><strong>self.file_lines</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – Lines from the data source file. Must be managed after creating the
 class object if <cite>__init__(do_readFile=False)</cite></p></li>
-<li><p><strong>self.file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Path of source data file. Superfluous if <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> is never called</p></li>
-<li><p><strong>self.fmatter</strong> (<em>yaml</em>) – [default: empty <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> if yaml not found]
+<li><p><strong>self.file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Path of source data file. Superfluous if <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> is never called</p></li>
+<li><p><strong>self.fmatter</strong> (<em>yaml</em>) – [default: empty <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a> if yaml not found]
 Front matter as a yaml object. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a>.</p></li>
-<li><p><strong>self.yaml_delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – [default:”—”]
+<li><p><strong>self.yaml_delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – [default:”—”]
 Front matter delimiter. Can be used to change front matter delimter
 between reading the source file into <code class="xref py py-attr docutils literal notranslate"><span class="pre">file_lines</span></code> and executing
 <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter.html#editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter" title="editfrontmatter.EditFrontMatter.EditFrontMatter.dumpFrontMatter"><code class="xref py py-func docutils literal notranslate"><span class="pre">dumpFrontMatter()</span></code></a>/<a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.writeFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">writeFile()</span></code></a>.</p></li>
-<li><p><strong>self.yamlSeperator_pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/re.html#re.compile" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a>) – Regex patten for the yaml line delimiter. only used if <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> is called</p></li>
-<li><p><strong>self.yaml_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – Beginning of the yaml blob in the original source file. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p></li>
-<li><p><strong>self.yaml_end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – End of the yaml blob in the origional source file. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p></li>
-<li><p><strong>self.template_str</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Contains the jinja2 template. Can be manipulated between class
+<li><p><strong>self.yamlSeperator_pattern</strong> (<a class="reference external" href="https://docs.python.org/3/library/re.html#re.compile" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.compile()</span></code></a>) – Regex patten for the yaml line delimiter. only used if <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a> is called</p></li>
+<li><p><strong>self.yaml_start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Beginning of the yaml blob in the original source file. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p></li>
+<li><p><strong>self.yaml_end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – End of the yaml blob in the origional source file. Set in <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile.html#editfrontmatter.EditFrontMatter.EditFrontMatter.readFile" title="editfrontmatter.EditFrontMatter.EditFrontMatter.readFile"><code class="xref py py-func docutils literal notranslate"><span class="pre">readFile()</span></code></a></p></li>
+<li><p><strong>self.template_str</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Contains the jinja2 template. Can be manipulated between class
 instantiation and executing <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.run.html#editfrontmatter.EditFrontMatter.EditFrontMatter.run" title="editfrontmatter.EditFrontMatter.EditFrontMatter.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a></p></li>
-<li><p><strong>self.jinja2_env</strong> (<a class="reference external" href="http://jinja.pocoo.org/docs/api/#jinja2.Environment" title="(in Jinja2 v2.11)"><em>jinja2.Environment</em></a>) – This object can be specified during class instantiation if greater control is required</p></li>
-<li><p><strong>self.keys_toDelete</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – keys to be deleted from <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> object. Utilized at the end of the <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.run.html#editfrontmatter.EditFrontMatter.EditFrontMatter.run" title="editfrontmatter.EditFrontMatter.EditFrontMatter.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> method</p></li>
+<li><p><strong>self.jinja2_env</strong> (<a class="reference external" href="https://jinja.palletsprojects.com/en/2.10.x/api/#jinja2.Environment" title="(in Jinja v2.10.x)"><em>jinja2.Environment</em></a>) – This object can be specified during class instantiation if greater control is required</p></li>
+<li><p><strong>self.keys_toDelete</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – keys to be deleted from <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> object. Utilized at the end of the <a class="reference internal" href="editfrontmatter.EditFrontMatter.EditFrontMatter.run.html#editfrontmatter.EditFrontMatter.EditFrontMatter.run" title="editfrontmatter.EditFrontMatter.EditFrontMatter.run"><code class="xref py py-func docutils literal notranslate"><span class="pre">run()</span></code></a> method</p></li>
 </ul>
 </dd>
 </dl>
@@ -416,7 +416,7 @@ instantiation and executing <a class="reference internal" href="editfrontmatter.
 <dd><p>Set the yaml delimiter and compile it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – A string to use as a delimiter for finding and editing
+<dd class="field-odd"><p><strong>delim</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – A string to use as a delimiter for finding and editing
 frontmatter in a file.</p>
 </dd>
 </dl>
@@ -432,7 +432,7 @@ function resets <code class="xref py py-attr docutils literal notranslate"><span
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – optional file path</p>
+<dd class="field-odd"><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – optional file path</p>
 </dd>
 </dl>
 <div class="admonition hint">
@@ -469,7 +469,7 @@ behavior</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – optional file path</p>
+<dd class="field-odd"><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – optional file path</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
@@ -491,8 +491,8 @@ behavior</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – Jinja template variable name</p></li>
-<li><p><strong>func</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><em>object</em></a>) – callback function that will set <cite>name</cite></p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Jinja template variable name</p></li>
+<li><p><strong>func</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><em>object</em></a>) – callback function that will set <cite>name</cite></p></li>
 </ul>
 </dd>
 <dt class="field-even">Example of implementing a filter for callback</dt>
@@ -571,7 +571,7 @@ Edit several fields of front matter.
 <dt class="field-odd">Example code</dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">editfrontmatter</span> <span class="k">import</span> <span class="n">EditFrontMatter</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">editfrontmatter</span> <span class="kn">import</span> <span class="n">EditFrontMatter</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="c1"># a jinja2 filter callback function</span>
@@ -609,7 +609,7 @@ Edit several fields of front matter.
 <dd><p>Delete a Jinja filter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – filter key</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – filter key</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
@@ -696,7 +696,7 @@ attribute is subject to change once <a class="reference internal" href="editfron
 <p>Variables to change yaml data are passed as a dictionary argument as <cite>extraVars_dict</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>extraVars_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.7)"><em>dict</em></a>) – key,value pairs to be set or added in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> object.</p>
+<dd class="field-odd"><p><strong>extraVars_dict</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><em>dict</em></a>) – key,value pairs to be set or added in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmatter</span></code> object.</p>
 </dd>
 </dl>
 <div class="admonition-example admonition">
@@ -734,9 +734,9 @@ attribute is subject to change once <a class="reference internal" href="editfron
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Karl N. Redman
+        &copy; Copyright 2020, Karl N. Redman
       <span class="lastupdated">
-        Last updated on Jul 04, 2019.
+        Last updated on Jan 26, 2020.
       </span>
 
     </p>

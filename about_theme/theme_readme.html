@@ -316,16 +316,16 @@
 <ul class="simple">
 <li><p>switch to <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">v3.68+</span></code></p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;</span>
-<span class="n">pyenv</span> <span class="k">local</span> <span class="mi">3</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">8</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd &lt;project_root&gt;
+pyenv local 3.6.8
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>if not already, add virtualenv</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="n">venv</span>
-<span class="o">#</span> <span class="n">activate</span> <span class="n">the</span> <span class="n">virtual</span> <span class="n">env</span>
-<span class="p">.</span> <span class="p">.</span><span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>virtualenv venv
+# activate the virtual env
+. ./venv/bin/activate
 </pre></div>
 </div>
 <div class="section" id="running-example-apps">
@@ -333,16 +333,16 @@
 <ul class="simple">
 <li><p>install runtime requirements</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd &lt;project_root&gt;
+pip install -r requirements.txt
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>run examples</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;./examples/data/&quot;</span> <span class="p">.</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example1</span><span class="o">/</span><span class="n">example1</span><span class="p">.</span><span class="n">py</span>
-<span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;./examples/data/&quot;</span> <span class="p">.</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example2</span><span class="o">/</span><span class="n">example2</span><span class="p">.</span><span class="n">py</span>
-<span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;./examples/data/&quot;</span> <span class="p">.</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example3</span><span class="o">/</span><span class="n">example3</span><span class="p">.</span><span class="n">py</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>TEST_DATA_DIR=&quot;./examples/data/&quot; ./examples/example1/example1.py
+TEST_DATA_DIR=&quot;./examples/data/&quot; ./examples/example2/example2.py
+TEST_DATA_DIR=&quot;./examples/data/&quot; ./examples/example3/example3.py
 </pre></div>
 </div>
 </div>
@@ -351,15 +351,15 @@
 <ul class="simple">
 <li><p>install build requirements</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;/</span><span class="n">docsource</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd &lt;project_root&gt;/docsource
+pip install -r requirements.txt
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>build docs for github pages / review</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">the</span> <span class="n">path</span> <span class="k">is</span> <span class="n">really</span> <span class="k">not</span> <span class="n">necessary</span>
-<span class="n">make</span> <span class="n">clean</span><span class="p">;</span> <span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">github</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># the path is really not necessary
+make clean; TEST_DATA_DIR=&quot;../examples/data/&quot; make github
 </pre></div>
 </div>
 <ul class="simple">
@@ -375,9 +375,9 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">doctest</span></code> will output test results to the <code class="docutils literal notranslate"><span class="pre">cli</span></code></p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;/</span><span class="n">docsource</span>
-<span class="o">#</span> <span class="n">run</span> <span class="n">doctest</span> <span class="p">(</span><span class="k">with</span> <span class="n">custom</span> <span class="n">path</span><span class="p">)</span>
-<span class="n">make</span> <span class="n">clean</span><span class="p">;</span> <span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">doctest</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd &lt;project_root&gt;/docsource
+# run doctest (with custom path)
+make clean; TEST_DATA_DIR=&quot;../examples/data/&quot; make doctest
 </pre></div>
 </div>
 </div>
@@ -402,9 +402,9 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Karl N. Redman
+        &copy; Copyright 2020, Karl N. Redman
       <span class="lastupdated">
-        Last updated on Jul 04, 2019.
+        Last updated on Jan 26, 2020.
       </span>
 
     </p>

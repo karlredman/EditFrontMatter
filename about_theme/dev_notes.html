@@ -334,31 +334,31 @@
 <ul class="simple">
 <li><p>Setup development environment:</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;</span>
-<span class="n">virtualenv</span> <span class="n">venv</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd &lt;project_root&gt;
+virtualenv venv
+pip install -r requirements.txt
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Build docs:</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">prep</span> <span class="n">build</span> <span class="n">environment</span>
-<span class="n">cd</span> <span class="o">&lt;</span><span class="n">project_root</span><span class="o">&gt;/</span><span class="n">docsource</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># prep build environment
+cd &lt;project_root&gt;/docsource
+pip install -r requirements.txt
 
-<span class="o">#</span> <span class="k">for</span> <span class="k">each</span> <span class="n">document</span> <span class="n">module</span> <span class="p">(</span><span class="k">if</span> <span class="n">sources</span> <span class="n">added</span><span class="p">)</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">editfrontmatter</span> <span class="p">..</span><span class="o">/</span><span class="n">editfrontmatter</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example1</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example1</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example2</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example2</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example3</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example3</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">apidoc</span> <span class="o">-</span><span class="n">o</span> <span class="k">source</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example4</span> <span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example4</span>
+# for each document module (if sources added)
+sphinx-apidoc -o source/editfrontmatter ../editfrontmatter
+sphinx-apidoc -o source/examples/example1 ../examples/example1
+sphinx-apidoc -o source/examples/example2 ../examples/example2
+sphinx-apidoc -o source/examples/example3 ../examples/example3
+sphinx-apidoc -o source/examples/example4 ../examples/example4
 
-<span class="o">#</span> <span class="n">run</span> <span class="n">doctest</span> <span class="p">(</span><span class="k">with</span> <span class="n">custom</span> <span class="n">path</span><span class="p">)</span>
-<span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">doctest</span>
+# run doctest (with custom path)
+TEST_DATA_DIR=&quot;../examples/data/&quot; make doctest
 
-<span class="o">#</span> <span class="n">make</span> <span class="n">the</span> <span class="n">docs</span> <span class="p">(</span><span class="k">for</span> <span class="n">github</span> <span class="n">pages</span><span class="p">)</span>
-<span class="o">##</span> <span class="n">the</span> <span class="n">path</span> <span class="k">is</span> <span class="n">usually</span> <span class="k">not</span> <span class="n">necessary</span>
-<span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">github</span>
+# make the docs (for github pages)
+## the path is usually not necessary
+TEST_DATA_DIR=&quot;../examples/data/&quot; make github
 </pre></div>
 </div>
 <ul class="simple">
@@ -431,8 +431,8 @@ max-width: 1200px !important;
 <li><p>add <code class="docutils literal notranslate"><span class="pre">modules</span></code> to the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> (or appropriat) file</p></li>
 </ul>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
-    <span class="nc">:maxdepth:</span> <span class="nf">2</span>
-    <span class="nc">:caption:</span> <span class="nf">Contents:</span>
+    <span class="nc">:maxdepth:</span> 2
+    <span class="nc">:caption:</span> Contents:
 
     modules
 </pre></div>
@@ -440,8 +440,8 @@ max-width: 1200px !important;
 </li>
 <li><p>Hide contents from page while adding it to <code class="docutils literal notranslate"><span class="pre">toctree</span></code> sidebar</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
-    <span class="nc">:maxdepth:</span> <span class="nf">2</span>
-    <span class="nc">:caption:</span> <span class="nf">Contents:</span>
+    <span class="nc">:maxdepth:</span> 2
+    <span class="nc">:caption:</span> Contents:
     <span class="nc">:hidden:</span>
 
     modules
@@ -695,7 +695,7 @@ max-width: 1200px !important;
 <ul class="simple">
 <li><p>The chain for the rst files is this:</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">index</span><span class="p">.</span><span class="n">rst</span> <span class="c1">--&gt; modules --&gt; editfrontmatter.rst</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>index.rst --&gt; modules --&gt; editfrontmatter.rst
 </pre></div>
 </div>
 <div class="section" id="before-adding-autosummary-functionality">
@@ -707,7 +707,7 @@ max-width: 1200px !important;
 <span class="gh">=======================</span>
 
 <span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
-   <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+   <span class="nc">:maxdepth:</span> 2
 
    editfrontmatter/editfrontmatter
 </pre></div>
@@ -715,26 +715,26 @@ max-width: 1200px !important;
 <ul class="simple">
 <li><p>editfrontmatter.rst is the package level rst (before autosummary changes)</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="n">automodule</span><span class="p">::</span> <span class="n">editfrontmatter</span><span class="p">.</span><span class="n">EditFrontMatter</span>
-    <span class="p">:</span><span class="n">noindex</span><span class="p">:</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>.. automodule:: editfrontmatter.EditFrontMatter
+    :noindex:
 
-<span class="p">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">editfrontmatter</span><span class="p">.</span><span class="n">EditFrontMatter</span><span class="p">([</span><span class="k">options</span><span class="p">])</span>
-    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">undoc</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">private</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">inherited</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="k">show</span><span class="o">-</span><span class="n">inheritance</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">special</span><span class="o">-</span><span class="n">members</span><span class="p">:</span> <span class="n">__init__</span>
-    <span class="p">:</span><span class="n">member</span><span class="o">-</span><span class="k">order</span><span class="p">:</span> <span class="n">bysource</span>
+.. autoclass:: editfrontmatter.EditFrontMatter([options])
+    :members:
+    :undoc-members:
+    :private-members:
+    :inherited-members:
+    :show-inheritance:
+    :special-members: __init__
+    :member-order: bysource
 
-<span class="p">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">editfrontmatter</span><span class="p">.</span><span class="n">EditFrontMatter_Exception</span><span class="p">([</span><span class="k">options</span><span class="p">])</span>
-    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">undoc</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">private</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">inherited</span><span class="o">-</span><span class="n">members</span><span class="p">:</span>
-    <span class="p">:</span><span class="k">show</span><span class="o">-</span><span class="n">inheritance</span><span class="p">:</span>
-    <span class="p">:</span><span class="n">special</span><span class="o">-</span><span class="n">members</span><span class="p">:</span> <span class="n">__init__</span>
-    <span class="p">:</span><span class="n">member</span><span class="o">-</span><span class="k">order</span><span class="p">:</span> <span class="n">bysource</span>
+.. autoclass:: editfrontmatter.EditFrontMatter_Exception([options])
+    :members:
+    :undoc-members:
+    :private-members:
+    :inherited-members:
+    :show-inheritance:
+    :special-members: __init__
+    :member-order: bysource
 </pre></div>
 </div>
 </div>
@@ -744,7 +744,7 @@ max-width: 1200px !important;
 <li><p>add the following to the bottome of <code class="docutils literal notranslate"><span class="pre">editfrontmatter.rst</span></code>. This will add a class definition file into the <code class="docutils literal notranslate"><span class="pre">_autosummary</span></code> subdirectory.</p></li>
 </ul>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autosummary</span><span class="p">::</span>
-    <span class="nc">:toctree:</span> <span class="nf">_autosummary</span>
+    <span class="nc">:toctree:</span> _autosummary
 
     EditFrontMatter
 </pre></div>
@@ -788,7 +788,7 @@ max-width: 1200px !important;
 <ul class="simple">
 <li><p>Build sphinx: This will causea lot of warnings. We’ll fix some of them in the next step. Also, this will cause the individal method files to be generated.</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">clean</span><span class="p">;</span> <span class="n">TEST_DATA_DIR</span><span class="o">=</span><span class="ss">&quot;../examples/data/&quot;</span> <span class="n">make</span> <span class="n">github</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>make clean; TEST_DATA_DIR=&quot;../examples/data/&quot; make github
 </pre></div>
 </div>
 <ul class="simple">
@@ -810,8 +810,8 @@ editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.rst  editfrontma
     <span class="nc">:private-members:</span>
     <span class="nc">:inherited-members:</span>
     <span class="nc">:show-inheritance:</span>
-    <span class="nc">:special-members:</span> <span class="nf">__init__</span>
-    <span class="nc">:member-order:</span> <span class="nf">bysource</span>
+    <span class="nc">:special-members:</span> __init__
+    <span class="nc">:member-order:</span> bysource
 
 <span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> editfrontmatter.EditFrontMatter_Exception([options])
     <span class="nc">:members:</span>
@@ -819,8 +819,8 @@ editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.rst  editfrontma
     <span class="nc">:private-members:</span>
     <span class="nc">:inherited-members:</span>
     <span class="nc">:show-inheritance:</span>
-    <span class="nc">:special-members:</span> <span class="nf">__init__</span>
-    <span class="nc">:member-order:</span> <span class="nf">bysource</span>
+    <span class="nc">:special-members:</span> __init__
+    <span class="nc">:member-order:</span> bysource
 
 <span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
     <span class="nc">:hidden:</span>
@@ -902,7 +902,7 @@ editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.rst  editfrontma
 <ul class="simple">
 <li><p>check the gitignore files and adjust accordingly</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="c1">--ignored</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>git status --ignored
 </pre></div>
 </div>
 <ul>
@@ -910,28 +910,28 @@ editfrontmatter.EditFrontMatter.EditFrontMatter.add_JinjaFilter.rst  editfrontma
 <ul class="simple">
 <li><p><a class="reference external" href="https://gist.github.com/stephenhardy/5470814">Steps to clear out the history of a git/github repository · GitHub</a></p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">double</span> <span class="k">check</span> <span class="p">.</span><span class="n">gitignore</span>
-<span class="n">git</span> <span class="n">status</span> <span class="c1">--ignored</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># double check .gitignore
+git status --ignored
 
-<span class="o">#</span> <span class="k">check</span> <span class="n">documentation</span> <span class="k">is</span> <span class="k">in</span> <span class="k">order</span>
+# check documentation is in order
 
-<span class="o">#</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">everything</span> <span class="n">builds</span> <span class="k">and</span> <span class="n">runs</span>
+# make sure everything builds and runs
 
-<span class="o">#</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">tests</span> <span class="n">pass</span>
+# make sure tests pass
 
-<span class="o">#</span> <span class="n">Remove</span> <span class="n">the</span> <span class="n">history</span> <span class="k">from</span>
-<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="p">.</span><span class="n">git</span>
+# Remove the history from
+rm -rf .git
 
-<span class="o">#</span> <span class="n">recreate</span> <span class="n">the</span> <span class="n">repos</span> <span class="k">from</span> <span class="n">the</span> <span class="k">current</span> <span class="n">content</span> <span class="k">only</span>
-<span class="n">git</span> <span class="n">init</span>
-<span class="n">git</span> <span class="k">add</span> <span class="o">-</span><span class="n">A</span>
-<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;Initial commit&quot;</span>
+# recreate the repos from the current content only
+git init
+git add -A
+git commit -m &quot;Initial commit&quot;
 
-<span class="o">#</span> <span class="n">push</span> <span class="k">to</span> <span class="n">the</span> <span class="n">github</span> <span class="n">remote</span> <span class="n">repos</span> <span class="n">ensuring</span> <span class="n">you</span> <span class="n">overwrite</span> <span class="n">history</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="k">add</span> <span class="n">origin</span> <span class="n">git</span><span class="o">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="o">&lt;</span><span class="n">YOUR</span> <span class="n">ACCOUNT</span><span class="o">&gt;/&lt;</span><span class="n">YOUR</span> <span class="n">REPOS</span><span class="o">&gt;</span><span class="p">.</span><span class="n">git</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="c1">--force origin master</span>
+# push to the github remote repos ensuring you overwrite history
+git remote add origin git@github.com:&lt;YOUR ACCOUNT&gt;/&lt;YOUR REPOS&gt;.git
+git push -u --force origin master
 
-<span class="o">#</span> <span class="n">checkout</span> <span class="n">the</span> <span class="n">project</span> <span class="n">again</span> <span class="k">and</span> <span class="n">reverify</span> <span class="o">/</span> <span class="n">retest</span> <span class="n">everything</span>
+# checkout the project again and reverify / retest everything
 </pre></div>
 </div>
 </li>
@@ -981,8 +981,8 @@ pip install -e .
 </div>
 <div class="section" id="install-distribution-dependiencies">
 <h3>Install distribution dependiencies<a class="headerlink" href="#install-distribution-dependiencies" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">assuming</span> <span class="n">virtualenv</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="c1">--upgrade setuptools wheel twine</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># assuming virtualenv
+pip install --upgrade setuptools wheel twine
 </pre></div>
 </div>
 </div>
@@ -991,20 +991,20 @@ pip install -e .
 <ul class="simple">
 <li><p>build source dist:</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">sdist</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>python setup.py sdist
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>build wheel</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">assumes</span> <span class="o">`</span><span class="n">pure</span> <span class="n">wheel</span><span class="o">`</span> <span class="p">(</span><span class="n">supports</span> <span class="n">py</span> <span class="n">v2</span> <span class="k">or</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">bdist_wheel</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>* assumes `pure wheel` (supports py v2 or 3)
+python setup.py bdist_wheel
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>verify README compliance / format</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">twine</span> <span class="k">check</span> <span class="n">dist</span><span class="cm">/*</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>twine check dist/*
 </pre></div>
 </div>
 </div>
@@ -1013,7 +1013,7 @@ pip install -e .
 <ul class="simple">
 <li><p>Test system</p></li>
 </ul>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">twine</span> <span class="n">upload</span> <span class="c1">--repository-url https://test.pypi.org/legacy/ dist/*</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 </pre></div>
 </div>
 <ul class="simple">
@@ -1042,9 +1042,9 @@ pip install -e .
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Karl N. Redman
+        &copy; Copyright 2020, Karl N. Redman
       <span class="lastupdated">
-        Last updated on Jul 04, 2019.
+        Last updated on Jan 26, 2020.
       </span>
 
     </p>
