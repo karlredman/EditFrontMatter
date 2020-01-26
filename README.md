@@ -1,6 +1,7 @@
 [![License](https://img.shields.io/github/license/karlredman/EditFrontMatter.svg)](https://github.com/karlredman/EditFrontMatter/blob/master/LICENSE)
 [![Issues](https://img.shields.io/github/issues/karlredman/EditFrontMatter.svg)](https://github.com/karlredman/EditFrontMatter/issues)
 [![PyPi Version](https://img.shields.io/pypi/v/EditFrontMatter.svg?color=blue)](https://pypi.org/project/editfrontmatter/) <br>
+
 [![](https://github.com/karlredman/EditFrontMatter/workflows/Test%20Python%20Package%20and%20Docs/badge.svg)](https://github.com/karlredman/EditFrontMatter/actions?query=workflow%3A%22Test+Python+Package+and+Docs%22)
 [![](https://github.com/karlredman/EditFrontMatter/workflows/Build%20and%20Deploy%20Docs/badge.svg)](https://github.com/karlredman/EditFrontMatter/actions?query=workflow%3A%22Build+and+Deploy+Docs%22)
 
